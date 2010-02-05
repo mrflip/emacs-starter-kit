@@ -11,15 +11,15 @@
 (add-hook 'espresso-mode-hook 'idle-highlight)
 (setq espresso-indent-level 2)
 
+;; If you prefer js2-mode, use this instead:
+;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+
 (eval-after-load 'espresso
   '(progn
      ;; (define-key espresso-mode-map "{" 'paredit-open-brace)
      ;; (define-key espresso-mode-map "}" 'paredit-close-brace-and-newline)
           ;; fixes problem with pretty function font-lock
           (define-key espresso-mode-map (kbd ",") 'self-insert-command)
-          (font-lock-add-keywords 'espresso-mode
-                        '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\):"
-                           1 font-lock-warning-face t)))
           (font-lock-add-keywords
            'espresso-mode `(("\\(function *\\)("
                              (0 (progn (compose-region (match-beginning 1)

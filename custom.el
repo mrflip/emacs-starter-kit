@@ -103,7 +103,7 @@
  '(font-lock-negation-char-face ((t (:background "#f0e8e8"))))
  '(font-lock-string-face ((((class color) (background light)) (:foreground "Tan4"))))
  '(font-lock-type-face ((((class color) (background light)) (:foreground "DarkSlateBlue"))))
- '(font-lock-variable-name-face ((((class color) (background light)) (:foreground "Gray30"))))
+ '(font-lock-variable-name-face ((((class color) (background light)) (:foreground "#d9a"))))
  '(font-lock-warning-face ((t (:foreground "#a02020" :weight bold))))
  '(highlight ((((class color) (min-colors 88) (background light)) (:background "#f4f4f4"))))
  '(isearch ((((class color) (background light)) (:background "burlywood" :foreground "Black"))))

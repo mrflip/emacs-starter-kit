@@ -10,12 +10,12 @@
        '(("perl"    . cperl-mode))
        interpreter-mode-alist))
 
-(add-to-list 'load-path "~/.emacs.d/vendor/cucumber-mode")
-(add-to-list 'load-path "~/.emacs.d/vendor/haml-mode.el")
 (add-to-list 'load-path "~/.emacs.d/vendor")
-(autoload    'feature-mode "cucumber-mode" "Mode for editing cucumber files" t)
-(autoload    'haml-mode    "haml-mode"     "Mode for editing HAML files"     t)
-(autoload    'sass-mode    "sass-mode"     "Mode for editing Sass files"     t)
+(autoload    'feature-mode     "cucumber-mode"    "Mode for editing cucumber files"   t)
+(autoload    'haml-mode        "haml-mode"        "Mode for editing HAML files"       t)
+(autoload    'sass-mode        "sass-mode"        "Mode for editing Sass files"       t)
+(autoload    'pig-mode         "pig-mode"         "Mode for editing Hadoop Pig files" t)
+(autoload    'docbook-xml-mode "docbook-xml-mode" "Mode for editing Hadoop Pig files" t)
 
 ;; (insert (prin1-to-string auto-mode-alist))
 (setq auto-mode-alist (append (list
@@ -33,7 +33,7 @@
     '("\\.\\(gemspec\\|god\\)$"        . ruby-mode)
     '("\\.sass$"                       . sass-mode)
     '("\\.haml$"                       . haml-mode)
-    '("\\.pig\\'"                      . sql-mode)
+    '("\\.pig\\'"                      . pig-mode)
     '("\\.ya?ml\\'"                    . yaml-mode)
     '("\\.feature\(\\.erb\)?\\'"       . feature-mode)
     '("\\.ile\.txt\\'"                 . textile-mode)

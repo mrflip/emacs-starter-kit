@@ -11,6 +11,7 @@
  '(align-perl-modes (quote (perl-mode cperl-mode ruby-mode)))
  '(auto-save-list-file-prefix "~/.emacs.cruft/auto-saves/.saves-")
  '(backup-directory-alist (list (cons "." (expand-file-name "~/.emacs.cruft/backups/"))))
+ '(c-basic-offset 2)
  '(case-fold-search t)
  '(comment-empty-lines (quote (quote eol)))
  '(comment-multi-line nil)

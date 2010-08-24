@@ -115,7 +115,7 @@
                        ((bobp) 0)
                        ((looking-at "^[ \t]*--") (current-indentation))
                        ((looking-at ".*;[ \t]*$") (pig-statement-indentation))
-                       (t (+ (pig-statement-indentation) default-tab-width)) ) ) )) )
+                       (t (+ (pig-statement-indentation) c-basic-offset)) ) ) )) )
 
 (defun pig-statement-indentation ()
   (save-excursion

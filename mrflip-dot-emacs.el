@@ -13,10 +13,10 @@
 (setq default-frame-alist '( (left . -1) (top . 0) (width . 90)  (height . 40) )) 
 (setq initial-frame-alist '( (left . 0)  (top . 0) (width . 110) (height . 50) ))
 
-(setq myfont "-apple-bitstream vera sans mono-medium-r-normal--0-0-0-0-m-0-iso10646-1")
+(setq myfont "-apple-menlo-medium-r-normal--*-170-*-*-m-*-*-*")
 ;;(set-default-font "fixed")
-;; (setq myfont "Bitstream Vera Sans Mono-9")
-;; (set-default-font "-*-bitstream vera sans mono bold-bold-r-normal--*-132-*-*-m-*-*-*")
+;;(setq myfont "Bitstream Vera Sans Mono-9")
+;; To choose a font try C-x C-e on (menu-set-font) (Or hit C-M-s-t)
 (if emacs22up 
     (progn (set-default-font myfont)
            (add-to-list 'default-frame-alist (cons 'font myfont)) )

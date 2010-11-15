@@ -129,6 +129,7 @@
 ;; OSX commands
 (global-set-key  (kbd "M-h")            'do-hide-emacs)
 (global-set-key  (kbd "M-s-h")          'mark-paragraph)
+(global-set-key  (kbd "C-M-s-t")        'menu-set-font)
 
 (global-set-key  [C-f1]                 'customize-apropos)
 (global-set-key  [f8]                   'kmacro-end-and-call-macro)

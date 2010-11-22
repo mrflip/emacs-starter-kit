@@ -28,7 +28,7 @@
  '(cperl-tab-always-indent nil)
  '(css-indent-offset 2)
  '(current-language-environment "UTF-8")
- '(default-major-mode (quote text-mode))
+ '(default-major-mode (quote text-mode) t)
  '(default-truncate-lines t t)
  '(develock-max-column-plist (quote (emacs-lisp-mode nil lisp-interaction-mode nil change-log-mode nil texinfo-mode nil c-mode nil c++-mode nil java-mode nil jde-mode nil html-mode nil html-helper-mode nil cperl-mode nil perl-mode nil mail-mode nil message-mode nil cmail-mail-mode nil tcl-mode nil ruby-mode nil)))
  '(even-window-heights nil)
@@ -75,7 +75,7 @@
  '(tramp-default-method "ssh")
  '(transient-mark-mode t)
  '(visible-bell t)
- '(x-select-enable-clipboard t t)
+ '(x-select-enable-clipboard t)
  '(yaml-indent-offset 2))
  
 
@@ -85,6 +85,7 @@
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
  '(compilation-warning ((((class color) (min-colors 16)) (:foreground "#b86833" :weight bold))))
+ '(cursor ((t (:background "wheat4"))))
  '(develock-bad-manner-face ((t (:background "#e8e8e8" :foreground "#805010" :weight bold))))
  '(develock-lonely-parentheses-face ((t (:background "white" :foreground "#202050"))))
  '(develock-long-line-face-1 ((t (:foreground "#330000"))))
@@ -112,7 +113,7 @@
  '(mode-line ((((class color) (min-colors 88)) (:background "grey75" :foreground "black" :box (:line-width -1 :style released-button) :height 1.1 :family "Helvetica"))))
  '(region ((((class color) (background light)) (:background "#808055" :foreground "#000" :weight semi-bold))))
  '(rng-error-face ((t (:underline "#eecccc"))))
- '(secondary-selection ((t (:background "lavender"))))
+ '(secondary-selection ((t (:background "navajo white"))))
  '(show-paren-match ((t (:background "bisque" :foreground "firebrick"))))
  '(textile-acronym-face ((t (:foreground "#242"))))
  '(textile-alignments-face ((t (:foreground "#228"))))

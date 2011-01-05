@@ -38,6 +38,8 @@
     '("\\.feature\(\\.erb\)?\\'"       . feature-mode)
     '("\\.ile\.txt\\'"                 . textile-mode)
     '("\\.php\d?\\'"                   . php-mode)
+    '("\\.avdl\\'"                     . c-mode)
+    '("\\.av\(pr|sc\)\\'"              . js-mode)
     ;; add more modes here
     ) auto-mode-alist))
 

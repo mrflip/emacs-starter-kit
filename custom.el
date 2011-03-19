@@ -111,7 +111,7 @@
  '(lazy-highlight ((((class color) (background light)) (:background "Beige" :foreground "FireBrick"))))
  '(link ((((class color) (min-colors 88) (background light)) (:foreground "#000088" :underline t))))
  '(mode-line ((((class color) (min-colors 88)) (:background "grey75" :foreground "black" :box (:line-width -1 :style released-button) :height 1.1 :family "Helvetica"))))
- '(region ((((class color) (background light)) (:background "#808055" :foreground "#000" :weight semi-bold))))
+ '(region ((((class color) (background light)) (:background "#e0d095" :foreground "#000" :weight semi-bold))))
  '(rng-error-face ((t (:underline "#eecccc"))))
  '(secondary-selection ((t (:background "navajo white"))))
  '(show-paren-match ((t (:background "bisque" :foreground "firebrick"))))

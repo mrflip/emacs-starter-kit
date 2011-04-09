@@ -25,9 +25,11 @@
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 
+;; Load up ELPA, the package manager
+
 (add-to-list 'load-path dotfiles-dir)
+
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
-(add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 
@@ -39,6 +41,14 @@
 (setq emacs21up (>= emacs-major-version 21))
 (setq emacs20up (>= emacs-major-version 20))
 (setq emacs19up (>= emacs-major-version 19))
+
+;; Load up ELPA, the package manager
+(require 'package)
+(dolist (source '(("technomancy" . "http://repo.technomancy.us/emacs/")
+                  ("elpa" . "http://tromey.com/elpa/")))
+  (add-to-list 'package-archives source t))
+(package-initialize)
+(require 'starter-kit-elpa)
 
 ;; These should be loaded on startup rather than autoloaded on demand
 ;; since they are likely to be used in every session
@@ -52,14 +62,6 @@
 
 ;; backport some functionality to Emacs 22 if needed
 (require 'dominating-file)
-
-;; Load up ELPA, the package manager
-
-(require 'package)
-(package-initialize)
-(require 'starter-kit-elpa)
-
-;; (load "elpa-to-submit/nxhtml/autostart")
 
 ;; Load up starter kit customizations
 

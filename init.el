@@ -29,6 +29,7 @@
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit/jabber"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
 
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))
 (setq package-user-dir (concat dotfiles-dir "elpa"))
@@ -90,5 +91,7 @@
 (if (file-exists-p user-specific-dir)      (mapc #'load (directory-files user-specific-dir nil ".*el$")))
 
 ;; (if window-system (load-theme 'solarized))
+
+(if window-system (color-theme-solarized-light))
 
 ;;; init.el ends here

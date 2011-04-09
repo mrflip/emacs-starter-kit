@@ -10,10 +10,8 @@
 ;;;;   Set Window Font, Size and Position
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-(setq default-frame-alist '( (left . -1) (top . 0) (width . 90)  (height . 40) )) 
-(setq initial-frame-alist '( (left . 0)  (top . 0) (width . 110) (height . 50) ))
 
-(setq myfont "-apple-menlo-medium-r-normal--*-170-*-*-m-*-*-*")
+(setq myfont "-apple-menlo-medium-r-normal--*-125-*-*-m-*-*-*")
 ;;(set-default-font "fixed")
 ;;(setq myfont "Bitstream Vera Sans Mono-9")
 ;; To choose a font try C-x C-e on (menu-set-font) (Or hit C-M-s-t)

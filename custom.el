@@ -53,7 +53,6 @@
  '(js2-idle-timer-delay 1)
  '(mark-even-if-inactive t)
  '(ns-alternate-modifier (quote super))
- '(paren-match-face (quote paren-face-match-light))
  '(paren-sexp-mode t)
  '(predictive-mode t)
  '(read-file-name-completion-ignore-case t)
@@ -65,7 +64,8 @@
  '(scroll-bar-mode (quote right))
  '(sh-basic-offset 2)
  '(sh-indentation 2)
- '(show-paren-mode t nil (paren))
+ '(show-paren-mode t)
+ '(show-paren-style (quote expression))
  '(standard-indent 2)
  '(tab-always-indent nil)
  '(tool-bar-mode nil)
@@ -75,7 +75,7 @@
  '(tramp-default-method "ssh")
  '(transient-mark-mode t)
  '(visible-bell t)
- '(x-select-enable-clipboard t)
+ '(x-select-enable-clipboard t t)
  '(yaml-indent-offset 2))
  
 
@@ -84,10 +84,9 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(rng-error-face                     ((t (:underline "#eecccc"))))
- '(textile-h1-face                    ((t (:underline t :weight bold :height 2.0))))
- '(textile-h2-face                    ((t (:weight bold :height 1.5))))
- '(textile-h3-face                    ((t (:family "Trebuchet MS" :height 1.325 :slant italic))))
- '(textile-h4-face                    ((t (:family "Trebuchet MS" :height 1.25  :weight semi-bold :foreground "#002b36" :stipple nil))))
- '(textile-h5-face                    ((t (:family "Trebuchet MS" :height 1.2   :weight bold      :foreground "#002b36"))))
- )
+ '(rng-error-face ((t (:underline "#eecccc"))))
+ '(textile-h1-face ((t (:underline t :weight bold :height 2.0))))
+ '(textile-h2-face ((t (:weight bold :height 1.5))))
+ '(textile-h3-face ((t (:family "Trebuchet MS" :height 1.325 :slant italic))))
+ '(textile-h4-face ((t (:family "Trebuchet MS" :height 1.25 :weight semi-bold :foreground "#002b36" :stipple nil))))
+ '(textile-h5-face ((t (:family "Trebuchet MS" :height 1.2 :weight bold :foreground "#002b36")))))

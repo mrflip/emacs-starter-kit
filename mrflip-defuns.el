@@ -26,8 +26,6 @@
 ;;                                           (throw 'break file)))))))
 ;; (define-key ruby-mode-map "\C-cf" 'imw-find-file)
 
-
-
 (defun count-words-region (beginning end)
   "Print number of words in the region."
   (interactive "r")
@@ -50,7 +48,6 @@
   (interactive "")
   (save-excursion
     (delete-region (point) (progn (forward-word) (point))) ))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;   Indentation
@@ -90,7 +87,6 @@
 (defun unindent-line-or-region-rigidly (b e n) "(un)indent-rigidly by -arg tab-widths"
   (interactive "r\np")
   (indent-line-or-region-rigidly b e (* -1 n)))
-
 
 ;;
 ;;

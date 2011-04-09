@@ -10,6 +10,10 @@
        '(("perl"    . cperl-mode))
        interpreter-mode-alist))
 
+(add-to-list 'load-path "~/.emacs.d/color_themes")
+(autoload    'color-theme-solarized-light "color-theme-solarized" "Color Theme based on http://ethanschoonover.com/solarized" t)
+(autoload    'color-theme-solarized-dark  "color-theme-solarized" "Color Theme based on http://ethanschoonover.com/solarized" t)
+
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (autoload    'feature-mode     "cucumber-mode"    "Mode for editing cucumber files"   t)
 (autoload    'haml-mode        "haml-mode"        "Mode for editing HAML files"       t)

@@ -1,18 +1,87 @@
-[submodule "vendor/rspec"]
-	path = vendor/rspec
+[submodule "vendor/rspec-mode"]
+	path = vendor/rspec-mode
 	url = git://github.com/pezra/rspec-mode.git
-[submodule "vendor/rhtml"]
-	path = vendor/rhtml
+[submodule "vendor/rhtml-mode"]
+	path = vendor/rhtml-mode
 	url = git://github.com/eschulte/rhtml.git
 [submodule "vendor/rinari"]
 	path = vendor/rinari
-	url = git://github.com/eschulte/rinari.git
-[submodule "vendor/sinatra"]
-	path = vendor/sinatra
+	url = https://github.com/eschulte/rinari.git
+[submodule "vendor/sinatra-mode"]
+	path = vendor/sinatra-mode
 	url = git://github.com/eschulte/sinatra_el.git
-[submodule "vendor/rorg"]
-	path = vendor/rorg
-	url = git://github.com/eschulte/rorg.git
-[submodule "vendor/ess"]
-	path = vendor/ess
-	url = git://github.com/eschulte/ess.git
+[submodule "vendor/clojure-mode"]
+	path = vendor/clojure-mode
+	url = https://github.com/jochu/clojure-mode.git
+[submodule "vendor/coffee-mode"]
+	path = vendor/coffee-mode
+	url = https://github.com/defunkt/coffee-mode.git
+[submodule "vendor/js2-mode"]
+	path = vendor/js2-mode
+	url = https://github.com/mooz/js2-mode.git
+[submodule "vendor/yaml-mode"]
+	path = vendor/yaml-mode
+	url = https://github.com/yoshiki/yaml-mode.git
+[submodule "vendor/haml-mode"]
+	path = vendor/haml-mode
+	url = https://github.com/nex3/haml-mode.git
+[submodule "vendor/as3-mode"]
+	path = vendor/as3-mode
+	url = https://github.com/aemoncannon/as3-mode.git
+[submodule "vendor/sass-mode"]
+	path = vendor/sass-mode
+	url = https://github.com/nex3/sass-mode.git
+[submodule "vendor/applescript-mode"]
+	path = vendor/applescript-mode
+	url = https://github.com/ieure/applescript-mode.git
+[submodule "vendor/scss-mode"]
+	path = vendor/scss-mode
+	url = https://github.com/antonj/scss-mode.git
+[submodule "vendor/markdown-mode"]
+	path = vendor/markdown-mode
+	url = https://github.com/emacsmirror/markdown-mode.git
+[submodule "vendor/pig-mode"]
+	path = vendor/pig-mode
+	url = https://github.com/emacsmirror/pig-mode.git
+[submodule "vendor/wc-mode"]
+	path = vendor/wc-mode
+	url = https://github.com/emacsmirror/wc-mode.git
+[submodule "vendor/nginx-mode"]
+	path = vendor/nginx-mode
+	url = https://github.com/ajc/nginx-mode.git
+[submodule "vendor/php-mode-el"]
+	path = vendor/php-mode-el
+	url = https://github.com/ieure/php-mode-el.git
+[submodule "vendor/ruby-electric"]
+	path = vendor/ruby-electric
+	url = https://github.com/qoobaa/ruby-electric.git
+[submodule "vendor/yasnippet"]
+	path = vendor/yasnippet
+	url = https://github.com/emacsmirror/yasnippet.git
+[submodule "vendor/yasnippets-js"]
+	path = vendor/yasnippets-js
+	url = https://github.com/azer/js-yasnippets.git
+[submodule "vendor/yasnippets-ruby"]
+	path = vendor/yasnippets-ruby
+	url = https://github.com/bmaland/yasnippet-ruby-mode.git
+[submodule "vendor/paredit"]
+	path = vendor/paredit
+	url = https://github.com/emacsmirror/paredit.git
+[submodule "vendor/mmm-mode"]
+	path = vendor/mmm-mode
+	url = https://github.com/emacsmirror/mmm-mode.git
+[submodule "vendor/erlang_mode"]
+	path = vendor/erlang_mode
+	url = https://github.com/smtlaissezfaire/erlang_mode.git
+[submodule "vendor/cell-mode"]
+	path = vendor/cell-mode
+	url = https://github.com/dto/cell-mode.git
+[submodule "vendor/cucumber-mode"]
+	path = vendor/cucumber-mode
+	url = https://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/nxml-mode"]
+	path = vendor/nxml-mode
+	url = https://github.com/emacsmirror/nxml-mode.git
+[submodule "vendor/docbook-xml-mode"]
+	path = vendor/docbook-xml-mode
+	url = https://github.com/emacsmirror/docbook-xml-mode.git

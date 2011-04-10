@@ -28,6 +28,8 @@
  '(cperl-tab-always-indent nil)
  '(css-indent-offset 2)
  '(current-language-environment "UTF-8")
+ '(custom-buffer-style (quote brackets))
+ '(custom-magic-show-button t)
  '(default-major-mode (quote text-mode) t)
  '(default-truncate-lines t t)
  '(develock-max-column-plist (quote (emacs-lisp-mode nil lisp-interaction-mode nil change-log-mode nil texinfo-mode nil c-mode nil c++-mode nil java-mode nil jde-mode nil html-mode nil html-helper-mode nil cperl-mode nil perl-mode nil mail-mode nil message-mode nil cmail-mail-mode nil tcl-mode nil ruby-mode nil)))
@@ -84,9 +86,4 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(rng-error-face ((t (:underline "#eecccc"))))
- '(textile-h1-face ((t (:underline t :weight bold :height 2.0))))
- '(textile-h2-face ((t (:weight bold :height 1.5))))
- '(textile-h3-face ((t (:family "Trebuchet MS" :height 1.325 :slant italic))))
- '(textile-h4-face ((t (:family "Trebuchet MS" :height 1.25 :weight semi-bold :foreground "#002b36" :stipple nil))))
- '(textile-h5-face ((t (:family "Trebuchet MS" :height 1.2 :weight bold :foreground "#002b36")))))
+ )

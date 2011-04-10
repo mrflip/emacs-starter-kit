@@ -76,3 +76,12 @@
 [submodule "vendor/cell-mode"]
 	path = vendor/cell-mode
 	url = https://github.com/dto/cell-mode.git
+[submodule "vendor/cucumber-mode"]
+	path = vendor/cucumber-mode
+	url = https://github.com/michaelklishin/cucumber.el.git
+[submodule "vendor/nxml-mode"]
+	path = vendor/nxml-mode
+	url = https://github.com/emacsmirror/nxml-mode.git
+[submodule "vendor/docbook-xml-mode"]
+	path = vendor/docbook-xml-mode
+	url = https://github.com/emacsmirror/docbook-xml-mode.git

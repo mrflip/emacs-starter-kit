@@ -176,7 +176,7 @@
 (defgroup package nil
   "Manager for Emacs Lisp packages."
   :group 'applications
-  :version "24.1")
+  :version "23.3")
 
 ;;;###autoload
 (defcustom package-enable-at-startup t
@@ -189,7 +189,7 @@ Even if the value is nil, you can type \\[package-initialize] to
 activate the package system at any time."
   :type 'boolean
   :group 'package
-  :version "24.1")
+  :version "23.3")
 
 (defcustom package-load-list '(all)
   "List of packages for `package-initialize' to load.
@@ -208,7 +208,7 @@ If VERSION is nil, the package is not loaded (it is \"disabled\")."
   :type '(repeat symbol)
   :risky t
   :group 'package
-  :version "24.1")
+  :version "23.3")
 
 (defvar Info-directory-list)
 (declare-function info-initialize "info" ())
@@ -226,7 +226,7 @@ string for an archive and URL is a http: URL (a string)."
                 :value-type (string :tag "Archive URL"))
   :risky t
   :group 'package
-  :version "24.1")
+  :version "23.3")
 
 (defconst package-archive-version 1
   "Version number of the package archive understood by this file.
@@ -253,7 +253,7 @@ packages in `package-directory-list'."
   :type 'directory
   :risky t
   :group 'package
-  :version "24.1")
+  :version "23.3")
 
 (defcustom package-directory-list
   ;; Defaults are subdirs named "elpa" in the site-lisp dirs.
@@ -271,7 +271,7 @@ contrast, `package-user-dir' contains packages for personal use."
   :type '(repeat directory)
   :risky t
   :group 'package
-  :version "24.1")
+  :version "23.3")
 
 ;; The value is precomputed in finder-inf.el, but don't load that
 ;; until it's needed (i.e. when `package-intialize' is called).
@@ -1408,7 +1408,7 @@ buffers.  The arguments are ignored."
   (message "n-ext, i-nstall, d-elete, u-nmark, x-ecute, r-efresh, h-elp"))
 
 (define-obsolete-function-alias
-  'package-menu-view-commentary 'package-menu-describe-package "24.1")
+  'package-menu-view-commentary 'package-menu-describe-package "23.3")
 
 ;; Return the name of the package on the current line.
 (defun package-menu-get-package ()

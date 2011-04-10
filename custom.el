@@ -84,9 +84,4 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(rng-error-face ((t (:underline "#eecccc"))))
- '(textile-h1-face ((t (:underline t :weight bold :height 2.0))))
- '(textile-h2-face ((t (:weight bold :height 1.5))))
- '(textile-h3-face ((t (:family "Trebuchet MS" :height 1.325 :slant italic))))
- '(textile-h4-face ((t (:family "Trebuchet MS" :height 1.25 :weight semi-bold :foreground "#002b36" :stipple nil))))
- '(textile-h5-face ((t (:family "Trebuchet MS" :height 1.2 :weight bold :foreground "#002b36")))))
+ )

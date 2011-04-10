@@ -64,3 +64,15 @@
 [submodule "vendor/yasnippets-ruby"]
 	path = vendor/yasnippets-ruby
 	url = https://github.com/bmaland/yasnippet-ruby-mode.git
+[submodule "vendor/paredit"]
+	path = vendor/paredit
+	url = https://github.com/emacsmirror/paredit.git
+[submodule "vendor/mmm-mode"]
+	path = vendor/mmm-mode
+	url = https://github.com/emacsmirror/mmm-mode.git
+[submodule "vendor/erlang_mode"]
+	path = vendor/erlang_mode
+	url = https://github.com/smtlaissezfaire/erlang_mode.git
+[submodule "vendor/cell-mode"]
+	path = vendor/cell-mode
+	url = https://github.com/dto/cell-mode.git

@@ -28,6 +28,8 @@
  '(cperl-tab-always-indent nil)
  '(css-indent-offset 2)
  '(current-language-environment "UTF-8")
+ '(custom-buffer-style (quote brackets))
+ '(custom-magic-show-button t)
  '(default-major-mode (quote text-mode) t)
  '(default-truncate-lines t t)
  '(develock-max-column-plist (quote (emacs-lisp-mode nil lisp-interaction-mode nil change-log-mode nil texinfo-mode nil c-mode nil c++-mode nil java-mode nil jde-mode nil html-mode nil html-helper-mode nil cperl-mode nil perl-mode nil mail-mode nil message-mode nil cmail-mail-mode nil tcl-mode nil ruby-mode nil)))

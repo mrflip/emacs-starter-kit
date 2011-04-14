@@ -8,12 +8,13 @@
                                    'ruby-mode
                                    'inf-ruby
                                    'css-mode
-                                   'rinari
+  ;;                               'rinari
   ;;                               'nxml-mode
-                                   'yaml-mode
+  ;;                               'yaml-mode
                                    'find-file-in-project
                                    'magit
-                                   'gist)
+                                   'gist
+)
   "Libraries that should be installed by default.")
 
 (defun starter-kit-elpa-install ()
@@ -49,6 +50,6 @@ just have to assume it's online."
 ; (autoload 'paredit-mode "paredit" "" t)
 
 ;; Workaround for bug in the ELPA package for yaml-mode
-(autoload 'yaml-mode "yaml-mode" "" t)
+;; (autoload 'yaml-mode "yaml-mode" "" t)
 
 (provide 'starter-kit-elpa)

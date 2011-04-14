@@ -21,43 +21,46 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   ;; -- for some bizarre reason emacs renders colors much lighter than given.
   ;; specifying #dddddd will give you something more like #e4e4e4
   (let (
-        (base0T    "#00161c") ;; 021d25 -- text
+        (greenish0 "#002822") ;; 00332c -- alert highlight
+        (pinkish0  "#433d18") ;;        -- alert highlight
         (base03    "#002028") ;; 002b36
-        (pinkish0  "#183d43") ;;        -- alert highlight
-        (base0H    "#022933") ;; 003640
-        (base02    "#022933") ;; 073642
-        (base0C    "#254555") ;;        -- cursor
+        (base0T    "#03161c") ;; 021d25 -- text
+        (base0H    "#04242e") ;; 00303c
+        (base02    "#0a2933") ;; 073642
+        (base0C    "#254555") ;; 305767  -- cursor
         (base01    "#455b62") ;; 586e75
-        (base00    "#556870") ;; 657b83
+        (base00    "#526870") ;; 657b83
         (base0     "#6f8284") ;; 839496
-        (base1     "#7f9090") ;; 93a1a1
-        (baseC     "#cac3ab") ;; d3ceb9 -- cursor
-        (base2     "#eae3cb") ;; eee8d5
-        (baseT     "#eae3cb") ;; fdf4dc -- text
+        (base1     "#819090") ;; 93a1a1
+        (baseC     "#c9c3aa") ;; d3ceb9 -- cursor
+        (base2     "#eae3ca") ;; eee8d5
+        (baseT     "#eae3cb") ;; eee8d6 -- text
         (baseH     "#f3f0dd") ;; f5f3e4
-        (pinkish   "#fae9d4") ;; faeedc -- alert highlight
         (base3     "#fdf4dc") ;; fdf6e3
-        (yellow    "#a97c00") ;; b58900
-        (orange    "#c5350d") ;; cb4b16
-        (red       "#da1b1e") ;; dc322f
-        (magenta   "#ce1f6e") ;; d33682
-        (violet    "#575db7") ;; 6c71c4
-        (blue      "#0a79c8") ;; 268bd2
-        (cyan      "#0f9187") ;; 2aa198
-        (solgreen  "#728800") ;; 859900 ;; this one looks horrible, renaming
-        (green     "#287820") ;; 859900
-        (darkgreen "#115522") ;; 859900 ;; 3f7028
+        (pinkish   "#fae9d4") ;; faeedc -- alert highlight 
+        (greenish  "#e3fddc") ;; e7fde4 -- alert highlight
+        (yellow    "#a67800") ;; b58900
+        (orange    "#bd3a09") ;; cb4b16
+        (red       "#d02320") ;; dc322f
+        (magenta   "#c52370") ;; d33682
+        (violet    "#555aba") ;; 6c71c4
+        (blue      "#1a76cb") ;; 268bd2
+        (cyan      "#289186") ;; 2aa198
+        (solgreen  "#758900") ;; 859900 ;; this one looks horrible, renaming
+        (green     "#287820") ;; 298932
+        (darkgreen "#115522") ;; 016731 ;; 3f7028
         )
 
     (when (eq 'light mode)
-      (rotatef base03   base3)
-      (rotatef base02   base2)
-      (rotatef base01   base1)
-      (rotatef base00   base0)
-      (rotatef pinkish0 pinkish)
-      (rotatef base0C   baseC)
-      (rotatef base0T   baseT)
-      (rotatef base0H   baseH)
+      (rotatef base03    base3)
+      (rotatef base02    base2)
+      (rotatef base01    base1)
+      (rotatef base00    base0)
+      (rotatef pinkish0  pinkish)
+      (rotatef greenish0 greenish)
+      (rotatef base0C    baseC)
+      (rotatef base0T    baseT)
+      (rotatef base0H    baseH)
       )
     (color-theme-install
      `(color-theme-solarized
@@ -65,7 +68,6 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
         (background-color . ,base03)
         (background-mode  . ,mode)
         (cursor-color     . ,base0C))
-
        ;; basic
        (default                      ((t ( ))))
        (italic                       ((t (:italic t ))))
@@ -133,17 +135,17 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        ;; emacs-wiki
        (emacs-wiki-bad-link-face     ((t (:foreground ,red       :underline t ))))
        (emacs-wiki-link-face         ((t (:foreground ,blue      :underline t ))))
-       (emacs-wiki-verbatim-face     ((t (:foreground ,base00    :underline t ))))
+       (emacs-wiki-verbatim-face     ((t (:foreground ,base0     :underline t ))))
 
        ;; font-lock
        (font-lock-builtin-face       ((t (:foreground ,blue ))))
-       (font-lock-comment-face       ((t (:foreground ,base01    :italic t ))))
-       (font-lock-constant-face      ((t (:foreground ,magenta ))))
+       (font-lock-comment-face       ((t (:foreground ,base0     :italic t ))))
+       (font-lock-constant-face      ((t (:foreground ,violet ))))
        (font-lock-doc-face           ((t (:foreground ,cyan ))))
-       (font-lock-function-name-face ((t (:foreground ,violet ))))
-       (font-lock-keyword-face       ((t (:foreground ,blue ))))
-       (font-lock-string-face        ((t (:foreground ,green ))))
-       (font-lock-type-face          ((t (:foreground ,magenta ))))
+       (font-lock-function-name-face ((t (:foreground ,magenta  ))))
+       (font-lock-keyword-face       ((t (:foreground ,blue     ))))
+       (font-lock-string-face        ((t (:foreground ,green    ))))
+       (font-lock-type-face          ((t (:foreground ,violet   ))))
        (font-lock-variable-name-face ((t (:foreground ,cyan ))))
        (font-lock-warning-face       ((t (:foreground ,red       :bold t ))))
        (font-lock-negation-char-face ((t (:foreground ,red ))))
@@ -164,8 +166,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (org-todo                     ((t (:foreground ,red       :bold t ))))
        (org-done                     ((t (:foreground ,green     :bold t ))))
        ;; show-paren
-       (show-paren-match-face        ((t (                       :background ,pinkish0 :bold t ))))
-       (show-paren-mismatch-face     ((t (                       :background ,base02   :foreground ,red ))))
+       (show-paren-match-face        ((t (                       :background ,greenish0 :bold t ))))
+       (show-paren-mismatch-face     ((t (                       :background ,base02    :foreground ,red ))))
        ;; misc
        (rng-error-face               ((t (:foreground ,red       :underline t ))))
        (link                         ((t (:foreground ,blue      :underline t ))))

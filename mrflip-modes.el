@@ -38,6 +38,8 @@
 (autoload    'sinatra-mode     "sinatra-mode"     "Mode for editing sinatra files"         t)
 (autoload    'wc-mode          "wc-mode"          "Mode for counting words, etc in region" t)
 (autoload    'yaml-mode        "yaml-mode"        "Mode for editing YAML files"            t)
+(autoload    'textile-mode     "textile-mode"     "Mode for editing Textile files"         t)
+(autoload  'ruby-electric-mode "ruby-electric"    "Mode for whizzy braces in Ruby"         t)
 
 ;; (insert (prin1-to-string auto-mode-alist))
 (setq auto-mode-alist (append (list

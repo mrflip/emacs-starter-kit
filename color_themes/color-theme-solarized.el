@@ -189,6 +189,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (textile-strong-face          ((t (:weight bold ))))
        (textile-emph-face            ((t (:foreground ,darkgreen :slant italic ))))
        (textile-deleted-face         ((t (:foreground ,red ))))
+       ;; markdown
+       (markdown-inline-code-face    ((t (:foreground ,baseC ))))
        ;;
        (font-lock-comment-delimiter-face    ((t (:foreground ,darkgreen :italic t ))))
        (font-lock-regexp-grouping-backslash ((t (:foreground ,magenta :background ,base01 ))))

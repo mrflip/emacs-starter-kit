@@ -63,6 +63,7 @@
  '(remote-shell-program "/usr/bin/ssh")
  '(require-final-newline t)
  '(ruby-deep-indent-paren nil)
+ '(safe-local-variable-values (quote ((encoding . utf-8) (encoding . binary) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby") (whitespace-line-column . 80) (lexical-binding . t))))
  '(scroll-bar-mode (quote right))
  '(sh-basic-offset 2)
  '(sh-indentation 2)
@@ -86,4 +87,13 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- )
+ '(markdown-bold-face ((t (:weight bold))))
+ '(markdown-header-face ((t (:weight bold :family "Trebuchet MS"))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :underline t :height 2.0))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.5))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :slant italic :height 1.325))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.25))))
+ '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.125))))
+ '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.125))))
+ '(markdown-inline-code-face ((t (:inherit font-lock-constant-face))))
+ '(markdown-pre-face ((t (:inherit markdown-inline-code-face)))))

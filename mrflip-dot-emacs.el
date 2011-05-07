@@ -36,4 +36,23 @@
 ;; (yas/initialize)
 ;; (yas/load-directory "~/.emacs.d/snippets")
 
+;; ;; UNTESTED
+;;
+;; (defun tags-complete-tag (string predicate what)
+;;   (save-excursion
+;;   ;; If we need to ask for the tag table, allow that.
+;;   (if (eq what t)
+;;      (all-completions string (tags-completion-table) predicate)
+;;    (try-completion string (tags-completion-table) predicate))))
+
+;; reorder hippie expand
+
+(setq hippie-expand-try-functions-list (delete 'try-complete-lisp-symbol-partially hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (delete 'try-complete-lisp-symbol           hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (delete 'try-complete-file-name-partially   hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (delete 'try-complete-file-name             hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (append hippie-expand-try-functions-list '(try-complete-file-name-partially)))
+
+
+
 (provide 'mrflip-dot-emacs)

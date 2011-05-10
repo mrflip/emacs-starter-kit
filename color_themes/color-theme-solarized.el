@@ -21,8 +21,9 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   ;; -- for some bizarre reason emacs renders colors much lighter than given.
   ;; specifying #dddddd will give you something more like #e4e4e4
   (let (
-        (greenish0 "#002822") ;; 00332c -- alert highlight
-        (pinkish0  "#433d18") ;;        -- alert highlight
+        (greenish0 "#002822") ;; 00332c -- alert  highlight
+        (bluish0   "#183d43") ;;        -- notice highlight
+        (pinkish0  "#433d18") ;;        -- OK     highlight
         (base03    "#002028") ;; 002b36
         (base0T    "#03161c") ;; 021d25 -- text
         (base0H    "#04242e") ;; 00303c
@@ -37,8 +38,9 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
         (baseT     "#eae3cb") ;; eee8d6 -- text
         (baseH     "#f3f0dd") ;; f5f3e4
         (base3     "#fdf4dc") ;; fdf6e3
-        (pinkish   "#fae9d4") ;; faeedc -- alert highlight 
-        (greenish  "#e3fddc") ;; e7fde4 -- alert highlight
+        (pinkish   "#fae9d4") ;; faeedc -- alert  highlight 
+        (bluish    "#d4e9fa") ;;        -- notice highlight 
+        (greenish  "#e3fddc") ;; e7fde4 -- OK     highlight
         (yellow    "#a67800") ;; b58900
         (orange    "#bd3a09") ;; cb4b16
         (red       "#d02320") ;; dc322f
@@ -57,6 +59,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
       (rotatef base01    base1)
       (rotatef base00    base0)
       (rotatef pinkish0  pinkish)
+      (rotatef bluish0   bluish)
       (rotatef greenish0 greenish)
       (rotatef base0C    baseC)
       (rotatef base0T    baseT)
@@ -125,10 +128,12 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (custom-group-tag             ((t (:foreground ,blue      :bold t ))))
        (custom-variable-tag          ((t (:foreground ,cyan ))))
        (custom-link                  ((t (:foreground ,magenta   :italic t ))))
+       
        ;; diff
-       (diff-added                   ((t (:foreground ,green     :inverse-video t ))))
-       (diff-changed                 ((t (:foreground ,yellow    :inverse-video t ))))
-       (diff-removed                 ((t (:foreground ,red       :inverse-video t ))))
+       (diff-added                   ((t (:foreground ,greenish0  :background ,base00  :inverse-video t ))))
+       (diff-changed                 ((t (:foreground ,bluish0    :background ,base0   :inverse-video t ))))
+       (diff-removed                 ((t (:foreground ,pinkish0   :background ,base00  :inverse-video t ))))
+       (diff-context                 ((t (:foreground "#eeeede"   :background ,base00  :inverse-video t ))))
        ;; dropdown
        (dropdown-list-face           ((t (                       :background ,pinkish0 ))))
        (dropdown-list-selection-face ((t (:foreground ,base2     :inverse-video t ))))

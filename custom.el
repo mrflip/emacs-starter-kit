@@ -59,7 +59,7 @@
  '(predictive-mode t)
  '(read-file-name-completion-ignore-case t)
  '(recentf-exclude (quote ("/[^/]+@[^/]+:.*")))
- '(recentf-save-file "~/.emacs.cruft/recentf")
+ '(recentf-save-file "~/.recentf")
  '(remote-shell-program "/usr/bin/ssh")
  '(require-final-newline t)
  '(ruby-deep-indent-paren nil)

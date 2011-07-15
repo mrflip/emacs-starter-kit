@@ -139,4 +139,5 @@
 (global-set-key  (kbd "C-/")            'nxml-complete)
 (global-set-key  (kbd "C-x C-z")        'undo)
 (global-set-key  (kbd "C-c C-s")        'Buffer-menu-sort-by-path)
+
 (provide 'mrflip-bindings)

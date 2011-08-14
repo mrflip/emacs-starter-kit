@@ -132,3 +132,17 @@ makes)."
         (list rails-ruby-command (list "-c" local-file)))
     ('error ())))
 (provide 'mrflip-defuns)
+
+
+
+(defun wulign-region (start end arg)
+  (interactive (list (region-beginning) (region-end) current-prefix-arg))
+  (shell-command-on-region start end "wu-lign" t t))
+
+
+(defun force-save ()
+  (interactive)
+  (progn
+    (set-buffer-modified-p t)
+    (save-buffer)
+    ))

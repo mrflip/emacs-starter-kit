@@ -89,6 +89,8 @@
 (global-set-key	 (kbd "C-M-r")          'query-replace)
 (global-set-key  (kbd "C-M-z")          'suspend-emacs)
 
+(global-unset-key	 (kbd "C-x r l"))
+
 ;; (global-unset-key (kbd "C-M-3")	    )
 (global-set-key	 (kbd "C-M-3")          'comment-region)
 (global-set-key	 (kbd "C-M-#")          'comment-region)
@@ -99,10 +101,13 @@
 (global-set-key	 (kbd "C-x C-i")        'insert-buffer)
 (global-set-key	 (kbd "C-x f")          'find-file)	       ;Overrides C-x f as set-fill-column
 (global-set-key	 (kbd "C-x C-r")        'insert-file)
+(global-set-key	 (kbd "C-x C-n")        'next-error)
+
+(global-set-key	 (kbd "C-x ,")          'force-save)
+
 (global-set-key	 [C-f9]                 'compile)
 (global-set-key	 [C-find]               'compile)
 (global-set-key	 (kbd "M-s")            'tags-search)
-(global-set-key	 (kbd "C-x C-n")        'next-error)
 (global-set-key	 [find]                 'next-error)
 (global-set-key	 [f9]                   'next-error)
 (global-set-key	 (kbd "<f4>")           'repeat-complex-command)

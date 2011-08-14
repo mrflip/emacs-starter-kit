@@ -130,10 +130,11 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (custom-link                  ((t (:foreground ,magenta   :italic t ))))
        
        ;; diff
-       (diff-added                   ((t (:foreground ,greenish0  :background ,base00  :inverse-video t ))))
-       (diff-changed                 ((t (:foreground ,bluish0    :background ,base0   :inverse-video t ))))
-       (diff-removed                 ((t (:foreground ,pinkish0   :background ,base00  :inverse-video t ))))
-       (diff-context                 ((t (:foreground "#eeeede"   :background ,base00  :inverse-video t ))))
+       (diff-added                   ((t (:foreground ,greenish0  :background ,base00 :inverse-video t  ))))
+       (diff-changed                 ((t (:foreground ,bluish0    :background ,base0  :inverse-video t  ))))
+       (diff-removed                 ((t (:foreground ,pinkish0   :background ,base00 :inverse-video t  ))))
+       (diff-context                 ((t (:foreground "#eeeede"   :background ,base00 :inverse-video t  ))))
+
        ;; dropdown
        (dropdown-list-face           ((t (                       :background ,pinkish0 ))))
        (dropdown-list-selection-face ((t (:foreground ,base2     :inverse-video t ))))
@@ -141,7 +142,6 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (emacs-wiki-bad-link-face     ((t (:foreground ,red       :underline t ))))
        (emacs-wiki-link-face         ((t (:foreground ,blue      :underline t ))))
        (emacs-wiki-verbatim-face     ((t (:foreground ,base0     :underline t ))))
-
        ;; font-lock
        (font-lock-builtin-face       ((t (:foreground ,blue ))))
        (font-lock-comment-face       ((t (:foreground ,base0     :italic t ))))
@@ -203,6 +203,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (font-lock-regexp-grouping-backslash ((t (:foreground ,magenta :background ,base01 ))))
        (font-lock-regexp-grouping-construct ((t (                :background ,base02 ))))
        ))))
+
 
 (defun color-theme-solarized-dark ()
   (interactive)

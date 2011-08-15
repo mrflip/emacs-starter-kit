@@ -4,7 +4,8 @@
 
 (require 'cl)
 
-(defvar starter-kit-packages (list 'idle-highlight
+(defvar starter-kit-packages (list 
+                                   'idle-highlight
                                    'ruby-mode
                                    'inf-ruby
                                    'css-mode

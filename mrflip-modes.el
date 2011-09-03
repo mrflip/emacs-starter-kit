@@ -1,4 +1,3 @@
-
 ;;
 ;;; This alist applies to files whose first line starts with `#!'
 ;;
@@ -33,13 +32,14 @@
 (autoload    'pig-mode         "pig-mode"         "Mode for editing Hadoop Pig files"      t)
 (autoload    'rhtml-mode       "rhtml-mode"       "Mode for editing rhtml files"           t)
 (autoload    'rspec-mode       "rspec-mode"       "Mode for editing RSpec files"           t)
+(autoload    'ruby-mode        "ruby-mode"        "Mode for editing ruby files"            t)
+(autoload    'ruby-electric-mode "ruby-electric"  "Mode for whizzy braces in Ruby"         t)
 (autoload    'sass-mode        "sass-mode"        "Mode for editing SASS files"            t)
 (autoload    'scss-mode        "scss-mode"        "Mode for editing SCSS files"            t)
 (autoload    'sinatra-mode     "sinatra-mode"     "Mode for editing sinatra files"         t)
 (autoload    'wc-mode          "wc-mode"          "Mode for counting words, etc in region" t)
 (autoload    'yaml-mode        "yaml-mode"        "Mode for editing YAML files"            t)
 (autoload    'textile-mode     "textile-mode"     "Mode for editing Textile files"         t)
-(autoload  'ruby-electric-mode "ruby-electric"    "Mode for whizzy braces in Ruby"         t)
 
 ;; (insert (prin1-to-string auto-mode-alist))
 (setq auto-mode-alist (append (list
@@ -83,7 +83,6 @@
     (add-hook 'local-write-file-hooks '(lambda() (save-excursion (untabify (point-min) (point-max)) (delete-trailing-whitespace) )))
     (set (make-local-variable 'indent-tabs-mode) 'nil)
     (imenu-add-to-menubar "IMENU")
-    ;; (require 'ruby-electric)
     (ruby-electric-mode t)
     (inf-ruby-keys)
     ;; (rails-minor-mode)

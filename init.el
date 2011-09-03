@@ -27,6 +27,10 @@
 
 ;; Load up ELPA, the package manager
 
+(setq autoload-file (concat dotfiles-dir "loaddefs.el"))
+(setq package-user-dir (concat dotfiles-dir "elpa"))
+(setq custom-file (concat dotfiles-dir "custom.el"))
+
 (add-to-list 'load-path dotfiles-dir)
 
 (add-to-list 'load-path (concat dotfiles-dir "/elpa-to-submit"))
@@ -54,7 +58,6 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rhtml-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rinari"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/rspec-mode"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/ruby-electric"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/sass-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/scss-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/sinatra-mode"))
@@ -63,10 +66,6 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippet"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippets-js"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippets-ruby"))
-
-(setq autoload-file (concat dotfiles-dir "loaddefs.el"))
-(setq package-user-dir (concat dotfiles-dir "elpa"))
-(setq custom-file (concat dotfiles-dir "custom.el"))
 
 (setq emacs22up (>= emacs-major-version 22))
 (setq emacs21up (>= emacs-major-version 21))

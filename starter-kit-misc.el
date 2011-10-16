@@ -126,20 +126,20 @@
 ;; (set-face-background 'vertical-border "white")
 ;; (set-face-foreground 'vertical-border "white")
 
-(eval-after-load 'diff-mode
-  '(progn
-     (set-face-foreground 'diff-added "green4")
-     (set-face-foreground 'diff-removed "red3")))
-
-(eval-after-load 'magit
-  '(progn
-     (set-face-foreground 'magit-diff-add "green3")
-     (set-face-foreground 'magit-diff-del "red3")))
-
-(eval-after-load 'mumamo
-  '(eval-after-load 'zenburn
-     '(ignore-errors (set-face-background
-                      'mumamo-background-chunk-submode "gray22"))))
+;; (eval-after-load 'diff-mode
+;;   '(progn
+;;      (set-face-foreground 'diff-added "green4")
+;;      (set-face-foreground 'diff-removed "red3")))
+;; 
+;; (eval-after-load 'magit
+;;   '(progn
+;;      (set-face-foreground 'magit-diff-add "green3")
+;;      (set-face-foreground 'magit-diff-del "red3")))
+;; 
+;; (eval-after-load 'mumamo
+;;   '(eval-after-load 'zenburn
+;;      '(ignore-errors (set-face-background
+;;                       'mumamo-background-chunk-submode "gray22"))))
 
 ;; Platform-specific stuff
 (when (eq system-type 'darwin)

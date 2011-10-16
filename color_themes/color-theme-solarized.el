@@ -130,7 +130,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (custom-link                  ((t (:foreground ,magenta   :italic t ))))
        
        ;; diff
-       (diff-added                   ((t (:foreground ,greenish0  :background ,base00 :inverse-video t  ))))
+       (diff-added-face              ((t (:foreground ,greenish0  :background ,base00 :inverse-video t  ))))
        (diff-changed                 ((t (:foreground ,bluish0    :background ,base0  :inverse-video t  ))))
        (diff-removed                 ((t (:foreground ,pinkish0   :background ,base00 :inverse-video t  ))))
        (diff-context                 ((t (:foreground "#eeeede"   :background ,base00 :inverse-video t  ))))

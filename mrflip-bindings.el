@@ -103,6 +103,8 @@
 (global-set-key	 (kbd "C-x C-r")        'insert-file)
 (global-set-key	 (kbd "C-x C-n")        'next-error)
 
+(global-set-key	 (kbd "C-x 5 5")        'ns-toggle-fullscreen)
+
 (global-set-key	 (kbd "C-x ,")          'force-save)
 
 (global-set-key	 [C-f9]                 'compile)

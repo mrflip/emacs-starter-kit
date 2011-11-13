@@ -118,7 +118,8 @@
 (global-set-key	 (kbd "C-M-x")          'execute-extended-command)
 (global-set-key	 (kbd "C-M-q")          'fill-paragraph)
 (global-set-key	 (kbd "C-M-,")          'tags-loop-continue)
-(global-set-key	 (kbd "M-n")            'make-frame-command)
+(global-set-key	 (kbd "M-S-n")          'make-frame-command)
+(global-set-key  (kbd "M-`")            'other-frame)
 (global-set-key	 (kbd "M-z")            'undo)
 ;; make S-<key> do the delete equivalent of M-<key> for kills
 (global-set-key  (kbd "s-w")            'delete-region)
@@ -132,8 +133,8 @@
 (global-set-key  (kbd "<C-S-tab>")      'indent-code-rigidly)
 
 ;; OSX commands
-(global-set-key  (kbd "M-h")            'do-hide-emacs)
-(global-set-key  (kbd "M-s-h")          'mark-paragraph)
+(global-set-key  (kbd "M-h")            'ns-do-hide-emacs)
+(global-set-key  (kbd "M-s-h")          'ns-do-hide-others)
 (global-set-key  (kbd "C-M-s-t")        'menu-set-font)
 
 (global-set-key  [C-f1]                 'customize-apropos)

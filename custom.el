@@ -3,10 +3,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(align-open-comment-modes (quote (vhdl-mode emacs-lisp-mode lisp-interaction-mode lisp-mode scheme-mode c++-mode c-mode java-mode perl-mode cperl-mode python-mode makefile-mode ruby-mode)))
  '(align-perl-modes (quote (perl-mode cperl-mode ruby-mode)))
  '(auto-save-list-file-prefix "~/.emacs.cruft/auto-saves/.saves-")
@@ -81,18 +81,18 @@
  '(tramp-default-method "ssh")
  '(transient-mark-mode t)
  '(visible-bell t)
- '(x-select-enable-clipboard t t)
+ '(x-select-enable-clipboard t)
  '(yaml-indent-offset 2))
  
 
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(markdown-bold-face ((t (:weight bold))))
  '(markdown-header-face ((t (:weight bold :family "Trebuchet MS"))))
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :underline t :height 2.0))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.6))))
  '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.5))))
  '(markdown-header-face-3 ((t (:inherit markdown-header-face :slant italic :height 1.325))))
  '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.25))))

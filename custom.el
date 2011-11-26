@@ -46,7 +46,7 @@
  '(ido-enable-flex-matching t)
  '(ido-enable-regexp nil)
  '(ido-ignore-directories (quote ("\\`CVS/" "\\`\\.\\./" "\\`\\./" "\\`\\.svn")))
- '(ido-ignore-files (quote ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "\\`\\.DS_Store" "\\`\\.Icon" "\\`LICENSE\\'")))
+ '(ido-ignore-files (quote ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "\\`\\.DS_Store" "\\`\\.Icon" "\\`LICENSE\\'" "\\.bak\\'")))
  '(ido-use-filename-at-point nil)
  '(indent-region-mode nil t)
  '(inhibit-startup-screen t)

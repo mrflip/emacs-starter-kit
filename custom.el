@@ -66,7 +66,7 @@
  '(remote-shell-program "/usr/bin/ssh")
  '(require-final-newline t)
  '(ruby-deep-indent-paren nil)
- '(safe-local-variable-values (quote ((encoding . utf-8) (encoding . binary) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby") (whitespace-line-column . 80) (lexical-binding . t))))
+ '(safe-local-variable-values (quote ((sh-indent-comment . t) (encoding . utf-8) (encoding . binary) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby") (whitespace-line-column . 80) (lexical-binding . t))))
  '(scroll-bar-mode (quote right))
  '(sh-basic-offset 2)
  '(sh-indentation 2)

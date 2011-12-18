@@ -32,6 +32,7 @@
 (global-set-key	 [C-backspace]          'backward-kill-word)
 (global-set-key	 (kbd "C-s-.")          'overwrite-mode)
 (global-set-key  (kbd "C-c w")          'delete-trailing-whitespace)   ;; http://bsdaemon.blogspot.com/2006/01/handling-eol-whitespace-in-emacs.html
+(global-set-key  (kbd "C-c C-w")        'delete-trailing-whitespace)
 (global-set-key	 (kbd "C-m")            'newline-and-indent)
 (global-set-key	 [home]                 'beginning-of-line)
 (global-set-key	 [M-left]               'beginning-of-line)

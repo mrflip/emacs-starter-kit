@@ -9,7 +9,7 @@
 (defun set-tab-width-8 ()          "Sets tab width to 8" (interactive) (setq tab-width 8) (font-lock-and-redraw))
 (defun Buffer-menu-sort-by-path () "Sort buffer menu by pathname"  (interactive) (Buffer-menu-sort 5))
 
-(defun font-lock-and-redraw ()          "Force a font-lock-fontify-buffer and then do the redraw" (interactive) (font-lock-fontify-buffer) (recenter) )
+(defun font-lock-and-redraw ()     "Force a font-lock-fontify-buffer and then do the redraw" (interactive) (font-lock-fontify-buffer) (recenter) )
 
 ;; (defun imw-find-file ()
 ;;  "Prompt for a `name' and scan the `lib' and `spec' directories in the IMW root directory ($IMW_ROOT) and open the first file matching `name.rb'"
@@ -48,6 +48,13 @@
   (interactive "")
   (save-excursion
     (delete-region (point) (progn (forward-word) (point))) ))
+
+;;; override definition in starter-kit-defuns.el
+(defun add-watchwords ()
+  (font-lock-add-keywords
+   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|KLUDGE\\|HACK\\):"
+          1 font-lock-warning-face t))))
+(add-hook 'markdown-mode-hook 'add-watchwords)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;   Indentation

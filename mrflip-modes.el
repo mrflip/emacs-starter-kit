@@ -21,7 +21,7 @@
 (autoload    'coffee-mode      "coffee-mode"      "Mode for editing coffeescript files"    t)
 (autoload    'docbook-xml-mode "docbook-xml-mode" "Mode for editing Docbook XML files"     t)
 (autoload    'erlang-mode      "erlang-mode"      "Mode for editing erlang files"          t)
-(autoload    'feature-mode     "cucumber-mode"    "Mode for editing cucumber files"        t)
+(autoload    'feature-mode     "feature-mode"     "Mode for editing cucumber files"        t)
 (autoload    'haml-mode        "haml-mode"        "Mode for editing HAML files"            t)
 (autoload    'js2-mode         "js2-mode"         "Mode for editing js2 files"             t)
 (autoload    'markdown-mode    "markdown-mode"    "Mode for editing markdown files"        t)

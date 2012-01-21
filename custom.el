@@ -3,10 +3,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(align-open-comment-modes (quote (vhdl-mode emacs-lisp-mode lisp-interaction-mode lisp-mode scheme-mode c++-mode c-mode java-mode perl-mode cperl-mode python-mode makefile-mode ruby-mode)))
  '(align-perl-modes (quote (perl-mode cperl-mode ruby-mode)))
  '(auto-save-list-file-prefix "~/.emacs.cruft/auto-saves/.saves-")
@@ -41,6 +41,7 @@
  '(ibuffer-expert t)
  '(icon-title-format "%b" t)
  '(ido-auto-merge-work-directories-length -1)
+ '(ido-case-fold t)
  '(ido-default-buffer-method (quote selected-window))
  '(ido-default-file-method (quote selected-window))
  '(ido-enable-flex-matching t)
@@ -81,15 +82,15 @@
  '(tramp-default-method "ssh")
  '(transient-mark-mode t)
  '(visible-bell t)
- '(x-select-enable-clipboard t)
+ '(x-select-enable-clipboard t t)
  '(yaml-indent-offset 2))
  
 
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(markdown-bold-face ((t (:weight bold))))
  '(markdown-header-face ((t (:weight bold :family "Trebuchet MS"))))
  '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.6))))

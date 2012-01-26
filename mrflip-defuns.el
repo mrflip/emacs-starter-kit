@@ -56,6 +56,8 @@
           1 font-lock-warning-face t))))
 (add-hook 'markdown-mode-hook 'add-watchwords)
 
+(add-hook 'coffee-mode-hook   'add-watchwords)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;   Indentation
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

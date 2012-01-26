@@ -13,6 +13,7 @@
  '(backup-directory-alist (list (cons "." (expand-file-name "~/.emacs.cruft/backups/"))))
  '(c-basic-offset 2)
  '(case-fold-search t)
+ '(coffee-tab-width 2)
  '(comment-empty-lines (quote (quote eol)))
  '(comment-multi-line nil)
  '(comment-style (quote indent))

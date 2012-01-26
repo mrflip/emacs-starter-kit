@@ -98,4 +98,8 @@
              ;;   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: |^[ \t]*[*+-] \\")
           ))
 
+(add-hook 'coffee-mode-hook
+          '(lambda()
+             (set (make-local-variable 'tab-width) 2)))
+
 (provide 'mrflip-modes)

@@ -64,6 +64,7 @@
     '("\\.textile\\(\\.erb\\)?$"     . textile-mode)
     '("\\.markdown\\(\\.erb\\)?$"    . markdown-mode)
     '("\\.md\\(\\.erb\\)?$"          . markdown-mode)
+    '("\\.coffee\\(\\.erb\\)?$"      . coffee-mode)
     '("\\.php\d?$"                   . php-mode)
     '("\\.avdl$"                     . c-mode)
     '("\\.av\(pr|sc\)$"              . js-mode)

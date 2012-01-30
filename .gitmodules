@@ -12,7 +12,7 @@
 	url = git://github.com/eschulte/sinatra_el.git
 [submodule "vendor/clojure-mode"]
 	path = vendor/clojure-mode
-	url = https://github.com/jochu/clojure-mode.git
+	url = https://github.com/technomancy/clojure-mode.git
 [submodule "vendor/coffee-mode"]
 	path = vendor/coffee-mode
 	url = https://github.com/defunkt/coffee-mode.git
@@ -57,7 +57,7 @@
 	url = https://github.com/qoobaa/ruby-electric.git
 [submodule "vendor/yasnippet"]
 	path = vendor/yasnippet
-	url = https://github.com/emacsmirror/yasnippet.git
+	url = https://github.com/capitaomorte/yasnippet.git
 [submodule "vendor/yasnippets-js"]
 	path = vendor/yasnippets-js
 	url = https://github.com/azer/js-yasnippets.git

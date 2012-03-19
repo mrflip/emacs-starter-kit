@@ -70,7 +70,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        ((foreground-color . ,baseT)
         (background-color . ,base03)
         (background-mode  . ,mode)
-        (cursor-color     . ,base0C))
+        (cursor-color     . ,cyan))
        ;; basic
        (default                      ((t ( ))))
        (italic                       ((t (:italic t ))))

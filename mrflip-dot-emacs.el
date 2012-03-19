@@ -53,6 +53,4 @@
 (setq hippie-expand-try-functions-list (delete 'try-complete-file-name             hippie-expand-try-functions-list))
 (setq hippie-expand-try-functions-list (append hippie-expand-try-functions-list '(try-complete-file-name-partially)))
 
-
-
 (provide 'mrflip-dot-emacs)

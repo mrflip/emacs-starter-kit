@@ -3,14 +3,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(align-open-comment-modes (quote (vhdl-mode emacs-lisp-mode lisp-interaction-mode lisp-mode scheme-mode c++-mode c-mode java-mode perl-mode cperl-mode python-mode makefile-mode ruby-mode)))
  '(align-perl-modes (quote (perl-mode cperl-mode ruby-mode)))
- '(auto-save-list-file-prefix "~/.emacs.cruft/auto-saves/.saves-")
- '(backup-directory-alist (list (cons "." (expand-file-name "~/.emacs.cruft/backups/"))))
  '(c-basic-offset 2)
  '(case-fold-search t)
  '(coffee-tab-width 2)
@@ -36,7 +34,9 @@
  '(develock-max-column-plist (quote (emacs-lisp-mode nil lisp-interaction-mode nil change-log-mode nil texinfo-mode nil c-mode nil c++-mode nil java-mode nil jde-mode nil html-mode nil html-helper-mode nil cperl-mode nil perl-mode nil mail-mode nil message-mode nil cmail-mail-mode nil tcl-mode nil ruby-mode nil)))
  '(even-window-heights nil)
  '(fill-column 80)
- '(flymake-gui-warnings-enabled nil)
+ '(flymake-gui-warnings-enabled t)
+ '(flymake-no-changes-timeout 2)
+ '(flymake-start-syntax-check-on-find-file nil)
  '(frame-title-format "[%b] in %F, %f" t)
  '(hl-line-mode nil t)
  '(ibuffer-expert t)
@@ -77,27 +77,26 @@
  '(standard-indent 2)
  '(tab-always-indent nil)
  '(tool-bar-mode nil)
- '(tramp-auto-save-directory "~/.emacs.cruft/auto-saves/")
- '(tramp-backup-directory-alist (quote ((".*" . "~/.emacs.cruft/backups/"))))
  '(tramp-completion-reread-directory-timeout 300)
  '(tramp-default-method "ssh")
  '(transient-mark-mode t)
+ '(vc-follow-symlinks t)
  '(visible-bell t)
- '(x-select-enable-clipboard t t)
+ '(x-select-enable-clipboard t)
  '(yaml-indent-offset 2))
  
 
 (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(markdown-bold-face ((t (:weight bold))))
  '(markdown-header-face ((t (:weight bold :family "Trebuchet MS"))))
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.6))))
- '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.5))))
- '(markdown-header-face-3 ((t (:inherit markdown-header-face :slant italic :height 1.325))))
- '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.25))))
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :underline t :height 1.5))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :foreground "#03462c" :slant italic :height 1.325))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face :foreground "dark slate gray" :height 1.25))))
  '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.125))))
  '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.125))))
  '(markdown-inline-code-face ((t (:inherit font-lock-constant-face))))

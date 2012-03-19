@@ -97,51 +97,64 @@
   (interactive "r\np")
   (indent-line-or-region-rigidly b e (* -1 n)))
 
-;;
-;;
-;; -- Make Flymake sane in Tramp --
-;;
 
-(defun flymake-create-temp-intemp (file-name prefix)
-  "Return file name in temporary directory for checking FILE-NAME.
-This is a replacement for `flymake-create-temp-inplace'. The
-difference is that it gives a file name in
-`temporary-file-directory' instead of the same directory as
-FILE-NAME.
+(defvar user-temporary-file-directory (concat "/foo/emacs-cruft/" user-login-name "/"))
+(make-directory user-temporary-file-directory t)
+(setq backup-by-copying   t
+      version-control     t
+      kept-new-versions   6
+      kept-old-versions   2
+      delete-old-versions t )
+(setq auto-save-list-file-prefix     (concat user-temporary-file-directory "auto-saves-"))
+(setq auto-save-file-name-transforms `((".*"   ,user-temporary-file-directory t)))
+(setq backup-directory-alist         `(("."  . ,user-temporary-file-directory)  (,tramp-file-name-regexp nil)))
+(setq tramp-backup-directory-alist   `((".*" . ,user-temporary-file-directory)))
+(setq tramp-auto-save-directory      (concat user-temporary-file-directory "tramp-saves"))
+(setq create-lockfiles               nil) ; must be using patch https://raw.github.com/gist/2100737
 
-For the use of PREFIX see that function.
-
-Note that not making the temporary file in another directory
-\(like here) will not if the file you are checking depends on
-relative paths to other files \(for the type of checks flymake
-makes)."
-  (unless (stringp file-name)
-    (error "Invalid file-name"))
-  (or prefix
-      (setq prefix "flymake"))
-  (let* ((name (concat
-                (file-name-nondirectory
-                 (file-name-sans-extension file-name))
-                "_" prefix))
-         (ext  (concat "." (file-name-extension file-name)))
-         (temp-name (make-temp-file name nil ext))
-         )
-    (flymake-log 3 "create-temp-intemp: file=%s temp=%s" file-name temp-name)
-    temp-name))
-
-(defun flymake-ruby-init ()
-  (condition-case er
-      (let* ((temp-file (flymake-init-create-temp-buffer-copy
-                         ;; 'flymake-create-temp-inplace
-                         'flymake-create-temp-intemp
-                         ))
-             (local-file  (file-relative-name
-                           temp-file
-                           (file-name-directory buffer-file-name))))
-        (list rails-ruby-command (list "-c" local-file)))
-    ('error ())))
-(provide 'mrflip-defuns)
-
+;; ;;
+;; ;;
+;; ;; -- Make Flymake sane in Tramp --
+;; ;;
+;; 
+;; (defun flymake-create-temp-intemp (file-name prefix)
+;;   "Return file name in temporary directory for checking FILE-NAME.
+;; This is a replacement for `flymake-create-temp-inplace'. The
+;; difference is that it gives a file name in
+;; `temporary-file-directory' instead of the same directory as
+;; FILE-NAME.
+;; 
+;; For the use of PREFIX see that function.
+;; 
+;; Note that not making the temporary file in another directory
+;; \(like here) will not if the file you are checking depends on
+;; relative paths to other files \(for the type of checks flymake
+;; makes)."
+;;   (unless (stringp file-name)
+;;     (error "Invalid file-name"))
+;;   (or prefix
+;;       (setq prefix "flymake"))
+;;   (let* ((name (concat
+;;                 (file-name-nondirectory
+;;                  (file-name-sans-extension file-name))
+;;                 "_" prefix))
+;;          (ext  (concat "." (file-name-extension file-name)))
+;;          (temp-name (make-temp-file name nil ext))
+;;          )
+;;     (flymake-log 3 "create-temp-intemp: file=%s temp=%s" file-name temp-name)
+;;     temp-name))
+;; 
+;; (defun flymake-ruby-init ()
+;;   (condition-case er
+;;       (let* ((temp-file (flymake-init-create-temp-buffer-copy
+;;                          ;; 'flymake-create-temp-inplace
+;;                          'flymake-create-temp-intemp
+;;                          ))
+;;              (local-file  (file-relative-name
+;;                            temp-file
+;;                            (file-name-directory buffer-file-name))))
+;;         (list rails-ruby-command (list "-c" local-file)))
+;;     ('error ())))
 
 
 (defun wulign-region (start end arg)
@@ -155,3 +168,6 @@ makes)."
     (set-buffer-modified-p t)
     (save-buffer)
     ))
+
+
+(provide 'mrflip-defuns)

@@ -89,6 +89,8 @@
     ;; (rails-minor-mode)
     ))
 
+(add-hook 'coding-hook 'turn-off-auto-fill)
+
 (add-hook 'haml-mode-hook (lambda () (set (make-local-variable 'indent-tabs-mode) 'nil) ))
 
 (add-hook 'markdown-mode-hook

@@ -14,6 +14,7 @@
 (autoload    'color-theme-solarized-dark       "color-theme-solarized"            "Color Theme based on http://ethanschoonover.com/solarized" t)
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
+(autoload    'adoc-mode        "adoc-mode"        "Mode for editing AsciiDoc files"        t)
 (autoload    'applescript-mode "applescript-mode" "Mode for editing applescript files"     t)
 (autoload    'as3-mode         "as3-mode"         "Mode for editing Actionscript files"    t)
 (autoload    'cell-mode        "cell-mode"        "Mode for lightweight spreadsheet"       t)
@@ -45,6 +46,7 @@
 (setq auto-mode-alist (append (list
     '("\\(M\\|m\\|GNUm\\)akefile\\([.-].*\\)?$" . makefile-mode)
     '("\\.\\(xml\\|xsl\\|xsd\\|kml\\|rng\\|mxml\\)\\(\\.erb\\)?$" . nxml-mode)
+    '("\\.\\(adoc\\|asciidoc\\|ad\\)$" . adoc-mode)
     '("\\.as$"                       . actionscript-mode)
     '("\\.\\(i|xs\\)$"               . c-mode)
     '("\\.\\([pP][LlMm]\\|al\\)$"    . cperl-mode)
@@ -95,6 +97,8 @@
 
 (add-hook 'markdown-mode-hook
           '(lambda ()
+             (set-fill-column 100)
+             (longlines-mode)
              (define-key markdown-mode-map (kbd "<tab>") 'indent-for-tab-command)
              (set (make-local-variable 'paragraph-start)
                   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: ")
@@ -104,5 +108,10 @@
 (add-hook 'coffee-mode-hook
           '(lambda()
              (set (make-local-variable 'tab-width) 2)))
+
+(add-hook 'adoc-mode-hook
+          (lambda()
+            (buffer-face-mode t)
+            ))
 
 (provide 'mrflip-modes)

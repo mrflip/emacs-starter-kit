@@ -21,38 +21,38 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   ;; -- for some bizarre reason emacs renders colors much lighter than given.
   ;; specifying #dddddd will give you something more like #e4e4e4
   (let (
-        (greenish0 "#002822") ;; 00332c -- alert  highlight
-        (bluish0   "#183d43") ;;        -- notice highlight
-        (pinkish0  "#433d18") ;;        -- OK     highlight
-        (base03    "#002028") ;; 002b36
-        (base0T    "#03161c") ;; 021d25 -- text
-        (base0H    "#04242e") ;; 00303c
-        (base02    "#0a2933") ;; 073642
-        (base0C    "#254555") ;; 305767  -- cursor
-        (base01    "#455b62") ;; 586e75
-        (base00    "#526870") ;; 657b83
-        (base0     "#6f8284") ;; 839496
-        (base1     "#819090") ;; 93a1a1
-        (baseC     "#c9c3aa") ;; d3ceb9 -- cursor
-        (base2     "#eae3ca") ;; eee8d5
-        (baseT     "#eae3cb") ;; eee8d6 -- text
-        (baseH     "#f3f0dd") ;; f5f3e4
-        (base3     "#fdf4dc") ;; fdf6e3
-        (pinkish   "#fae9d4") ;; faeedc -- alert  highlight 
-        (bluish    "#d4e9fa") ;;        -- notice highlight 
-        (greenish  "#e3fddc") ;; e7fde4 -- OK     highlight
-        (yellow    "#a67800") ;; b58900
-        (orange    "#bd3a09") ;; cb4b16
-        (red       "#d02320") ;; dc322f
-        (magenta   "#c52370") ;; d33682
-        (violet    "#555aba") ;; 6c71c4
-        (blue      "#1a76cb") ;; 268bd2
-        (cyan      "#289186") ;; 2aa198
-        (solgreen  "#758900") ;; 859900 ;; this one looks horrible, renaming
-        (green     "#287820") ;; 298932
-        (darkgreen "#115522") ;; 016731 ;; 3f7028
+        (greenish0 "#00332c") ;; 002822 -- alert  highlight
+        (bluish0   "#183d43") ;; 183d43 -- notice highlight **
+        (pinkish0  "#433d18") ;; 433d18 -- OK     highlight **
+        (base03    "#002b36") ;; 002028
+        (base0T    "#021d25") ;; 03161c -- text
+        (base0H    "#00303c") ;; 04242e
+        (base02    "#073642") ;; 0a2933
+        (base0C    "#305767") ;; 254555  -- cursor
+        (base01    "#586e75") ;; 455b62
+        (base00    "#657b83") ;; 526870
+        (base0     "#839496") ;; 6f8284
+        (base1     "#93a1a1") ;; 819090
+        (baseC     "#d3ceb9") ;; c9c3aa -- cursor
+        (base2     "#eee8d5") ;; eae3ca
+        (baseT     "#eee8d6") ;; eae3cb -- text
+        (baseH     "#f5f3e4") ;; f3f0dd
+        (base3     "#fdf6e3") ;; fdf4dc
+        (pinkish   "#faeedc") ;; fae9d4 -- alert  highlight 
+        (bluish    "#d4e9fa") ;; d4e9fa -- notice highlight 
+        (greenish  "#e7fde4") ;; e3fddc -- OK     highlight
+        (yellow    "#b58900") ;; a67800
+        (orange    "#cb4b16") ;; bd3a09
+        (red       "#dc322f") ;; d02320
+        (magenta   "#d33682") ;; c52370
+        (violet    "#6c71c4") ;; 555aba
+        (blue      "#268bd2") ;; 1a76cb
+        (cyan      "#2aa198") ;; 289186
+        (solgreen  "#859900") ;; 758900 ;; this one looks horrible, renaming
+        (green     "#298932") ;; 287820
+        (darkgreen "#016731") ;; 115522 ;; 3f7028
         )
-
+    
     (when (eq 'light mode)
       (rotatef base03    base3)
       (rotatef base02    base2)

@@ -79,3 +79,9 @@
 [submodule "vendor/docbook-xml-mode"]
 	path = vendor/docbook-xml-mode
 	url = https://github.com/emacsmirror/docbook-xml-mode.git
+[submodule "vendor/markup-faces"]
+	path = vendor/markup-faces
+	url = https://github.com/sensorflo/markup-faces.git
+[submodule "vendor/adoc-mode"]
+	path = vendor/adoc-mode
+	url = https://github.com/sensorflo/adoc-mode.git

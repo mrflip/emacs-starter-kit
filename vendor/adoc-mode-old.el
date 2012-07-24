@@ -1877,25 +1877,3 @@ Turning on Adoc mode runs the normal hook `adoc-mode-hook'."
 (provide 'adoc-mode)
 
 ;;; adoc-mode.el ends here
-
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(adoc-complex-replacement ((t (:inherit adoc-orig-default :background "#fae9d4" :foreground "#c52370" :box (:line-width 2 :color "#fae9d4" :style released-button)))))
-;;  '(adoc-delimiter ((t (:inherit adoc-orig-default :foreground "gray70"))))
-;;  '(adoc-generic ((t (:foreground "#03462c"))))
-;;  '(adoc-hide-delimiter ((t (:inherit adoc-orig-default :foreground "gray85"))))
-;;  '(adoc-list-item ((t (:inherit adoc-orig-default :foreground "#555aba" :weight bold))))
-;;  '(adoc-monospace ((t (:inherit (fixed-pitch adoc-generic) :height 0.9))))
-;;  '(adoc-replacement ((t (:inherit adoc-orig-default :foreground "#c52370"))))
-;;  '(adoc-secondary-text ((t (:foreground "#526870" :height 1.0))))
-;;  '(adoc-table-del ((t (:inherit adoc-orig-default :background "#f3f0dd" :foreground "#1a76cb"))))
-;;  '(adoc-title-0 ((t (:inherit adoc-title-4 :slant normal :height 1.8))))
-;;  '(adoc-title-1 ((t (:inherit adoc-title-4 :slant normal :height 1.5))))
-;;  '(adoc-title-2 ((t (:inherit adoc-title-4 :underline t :slant normal :height 1.325))))
-;;  '(adoc-title-3 ((t (:inherit adoc-title-4 :foreground "dark slate gray" :slant italic :height 1.25))))
-;;  '(adoc-title-4 ((t (:inherit adoc-generic :slant italic :weight bold :height 1.125 :family "Trebuchet MS"))))
-;;  '(fixed-pitch ((t (:family "Menlo"))))
-;; )

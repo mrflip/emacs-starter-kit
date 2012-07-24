@@ -49,15 +49,6 @@
   (save-excursion
     (delete-region (point) (progn (forward-word) (point))) ))
 
-;;; override definition in starter-kit-defuns.el
-(defun add-watchwords ()
-  (font-lock-add-keywords
-   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|KLUDGE\\|HACK\\):"
-          1 font-lock-warning-face t))))
-(add-hook 'markdown-mode-hook 'add-watchwords)
-
-(add-hook 'coffee-mode-hook   'add-watchwords)
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;   Indentation
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -169,5 +160,18 @@
     (save-buffer)
     ))
 
+(defadvice yes-or-no-p (around prevent-dialog activate)
+  "Prevent yes-or-no-p from activating a dialog"
+  (let ((use-dialog-box nil))
+    ad-do-it))
+(defadvice y-or-n-p (around prevent-dialog-yorn activate)
+  "Prevent y-or-n-p from activating a dialog"
+  (let ((use-dialog-box nil))
+    ad-do-it))
+
+(defun find-tag-push (tagname)
+  "Go to the next tag (same as C-u M-.)"
+  (interactive "P")
+  (find-tag tagname t))
 
 (provide 'mrflip-defuns)

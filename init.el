@@ -67,6 +67,9 @@
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippets-js"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/yasnippets-ruby"))
 
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/markup-faces"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/adoc-mode"))
+
 (setq emacs22up (>= emacs-major-version 22))
 (setq emacs21up (>= emacs-major-version 21))
 (setq emacs20up (>= emacs-major-version 20))

@@ -81,6 +81,12 @@
   "Evaluate the buffer with ruby."
   (shell-command-on-region (point-min) (point-max) "ruby"))
 
+;;; override definition in starter-kit-defuns.el
+(defun add-watchwords ()
+  (font-lock-add-keywords
+   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|KLUDGE\\|HACK\\):"
+          1 font-lock-warning-face t))))
+
 (add-hook 'ruby-mode-hook
   (lambda()
     (add-hook 'local-write-file-hooks '(lambda() (save-excursion (untabify (point-min) (point-max)) (delete-trailing-whitespace) )))
@@ -99,19 +105,36 @@
           '(lambda ()
              (set-fill-column 100)
              (longlines-mode)
+             (add-watchwords)
              (define-key markdown-mode-map (kbd "<tab>") 'indent-for-tab-command)
              (set (make-local-variable 'paragraph-start)
                   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: ")
              ;;   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: |^[ \t]*[*+-] \\")
           ))
 
+(add-hook 'adoc-mode-hook
+          '(lambda ()
+             (add-watchwords)
+             (set-fill-column 100)
+             (longlines-mode)
+          ))
+
 (add-hook 'coffee-mode-hook
           '(lambda()
+             (add-watchwords)
              (set (make-local-variable 'tab-width) 2)))
 
 (add-hook 'adoc-mode-hook
           (lambda()
             (buffer-face-mode t)
             ))
+
+
+;; (autoload    'doc-mode         "doc-mode"         nil t)
+;; ;; (add-to-list 'auto-mode-alist '("\\.adoc$" . doc-mode))
+;; (add-hook 'doc-mode-hook
+;; 	  '(lambda ()
+;; 	     (turn-on-auto-fill)
+;; 	     (require 'asciidoc)))
 
 (provide 'mrflip-modes)

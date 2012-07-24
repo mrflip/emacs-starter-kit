@@ -90,7 +90,8 @@
 (global-set-key	 (kbd "C-M-r")          'query-replace)
 (global-set-key  (kbd "C-M-z")          'suspend-emacs)
 
-(global-unset-key	 (kbd "C-x r l"))
+(global-unset-key (kbd "C-x r l"))
+(global-unset-key (kbd "C-x ."))      ;; 'set-fill-prefix removed
 
 ;; (global-unset-key (kbd "C-M-3")	    )
 (global-set-key	 (kbd "C-M-3")          'comment-region)
@@ -110,7 +111,6 @@
 
 (global-set-key	 [C-f9]                 'compile)
 (global-set-key	 [C-find]               'compile)
-(global-set-key	 (kbd "M-s")            'tags-search)
 (global-set-key	 [find]                 'next-error)
 (global-set-key	 [f9]                   'next-error)
 (global-set-key	 (kbd "<f4>")           'repeat-complex-command)
@@ -120,7 +120,6 @@
 (global-set-key	 (kbd "M-x")            'execute-extended-command)
 (global-set-key	 (kbd "C-M-x")          'execute-extended-command)
 (global-set-key	 (kbd "C-M-q")          'fill-paragraph)
-(global-set-key	 (kbd "C-M-,")          'tags-loop-continue)
 (global-set-key	 (kbd "M-S-n")          'make-frame-command)
 (global-set-key  (kbd "M-`")            'other-frame)
 (global-set-key	 (kbd "M-z")            'undo)
@@ -134,6 +133,10 @@
 (global-set-key  (kbd "<S-tab>")        'unindent-line-or-region-rigidly)
 (global-set-key  (kbd "<C-tab>")        'indent-line-or-region-rigidly)
 (global-set-key  (kbd "<C-S-tab>")      'indent-code-rigidly)
+
+(global-set-key	 (kbd "C-M-,")          'tags-loop-continue)
+(global-set-key	 (kbd "M-s")            'tags-search)
+(global-set-key	 (kbd "M-s-.")          'find-tag-push)
 
 ;; OSX commands
 (global-set-key  (kbd "M-h")            'ns-do-hide-emacs)

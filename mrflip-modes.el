@@ -42,6 +42,8 @@
 (autoload    'yaml-mode        "yaml-mode"        "Mode for editing YAML files"            t)
 (autoload    'textile-mode     "textile-mode"     "Mode for editing Textile files"         t)
 
+(autoload    'R-mode           "vendor/ess/lisp/ess-site" "Mode for editing R, sas, etc files" t)
+
 ;; (insert (prin1-to-string auto-mode-alist))
 (setq auto-mode-alist (append (list
     '("\\(M\\|m\\|GNUm\\)akefile\\([.-].*\\)?$" . makefile-mode)
@@ -70,6 +72,7 @@
     '("\\.php\d?$"                   . php-mode)
     '("\\.avdl$"                     . c-mode)
     '("\\.av\(pr|sc\)$"              . js-mode)
+    '("\\.[Rr]$"                     . R-mode)
     ;; add more modes here
     ) auto-mode-alist))
 
@@ -87,6 +90,10 @@
    nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|KLUDGE\\|HACK\\):"
           1 font-lock-warning-face t))))
 
+;; make tab be a tab in text modes...
+(defun insert-literal-tab (args) "insert a literal tab." (interactive '("")) (message args) (insert "	"))
+;; (define-key adoc-mode-map     (kbd "<tab>") 'insert-literal-tab)
+
 (add-hook 'ruby-mode-hook
   (lambda()
     (add-hook 'local-write-file-hooks '(lambda() (save-excursion (untabify (point-min) (point-max)) (delete-trailing-whitespace) )))
@@ -97,44 +104,111 @@
     ;; (rails-minor-mode)
     ))
 
-(add-hook 'coding-hook 'turn-off-auto-fill)
+(add-hook 'coding-hook
+          'turn-off-auto-fill)
 
-(add-hook 'haml-mode-hook (lambda () (set (make-local-variable 'indent-tabs-mode) 'nil) ))
+(add-hook 'haml-mode-hook
+          (lambda()
+            (set (make-local-variable 'indent-tabs-mode) 'nil)
+            ))
+
+(add-hook 'text-mode-hook
+          (lambda()
+            (define-key text-mode-map     (kbd "<tab>") 'insert-literal-tab)
+            ))
+
+(add-hook 'pig-mode-hook
+          (lambda()
+            (set (make-local-variable 'tab-width) '2)
+            ))
 
 (add-hook 'markdown-mode-hook
-          '(lambda ()
-             (set-fill-column 100)
-             (longlines-mode)
-             (add-watchwords)
-             (define-key markdown-mode-map (kbd "<tab>") 'indent-for-tab-command)
-             (set (make-local-variable 'paragraph-start)
-                  "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: ")
-             ;;   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: |^[ \t]*[*+-] \\")
-          ))
-
-(add-hook 'adoc-mode-hook
-          '(lambda ()
-             (add-watchwords)
-             (set-fill-column 100)
-             (longlines-mode)
-          ))
-
-(add-hook 'coffee-mode-hook
-          '(lambda()
-             (add-watchwords)
-             (set (make-local-variable 'tab-width) 2)))
+          (lambda()
+            (set-fill-column 100)
+            (longlines-mode)
+            (add-watchwords)
+            (set (make-local-variable 'tab-width) 8)
+            (define-key markdown-mode-map (kbd "<tab>") 'insert-literal-tab)
+            (set (make-local-variable 'paragraph-start)
+                 "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: ")
+            ;;   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: |^[ \t]*[*+-] \\")
+            ))
+;; (modify-syntax-entry ?\" "\"" markdown-mode-syntax-table)
 
 (add-hook 'adoc-mode-hook
           (lambda()
-            (buffer-face-mode t)
+            ;; (add-watchwords)
+            (set-fill-column 100)
+            ;; (longlines-mode)
+            (buffer-face-mode -1)
+            ))
+
+(add-hook 'coffee-mode-hook
+          (lambda()
+            (add-watchwords)
+            (set (make-local-variable 'tab-width) 2)
+            ))
+
+(c-add-style "flipjava" '(
+             (c-basic-offset . 4)
+             (c-comment-only-line-offset 0 . 0)
+             (c-offsets-alist
+              (inline-open           . 0)
+              (topmost-intro-cont    . +)
+              (statement-block-intro . +)
+              (knr-argdecl-intro     . 5)
+              (substatement-open     . +)
+              (substatement-label    . +)
+              (label                 . +)
+              (statement-case-open   . +)
+              (statement-cont        . +)
+              ;; (arglist-intro      . c-lineup-arglist-intro-after-paren)
+              (arglist-intro         . +)
+              (arglist-close         . c-lineup-arglist)
+              (access-label          . 0)
+              (inher-cont            . c-lineup-java-inher)
+              (func-decl-cont        . c-lineup-java-throws))))
+
+(add-hook 'java-mode-hook
+          (lambda()
+            (add-watchwords)
+            (set (make-local-variable 'tab-width) 4)
+            (set (make-local-variable 'standard-indent) 4)
+            (set (make-local-variable 'c-basic-offset) 'set-from-style)
             ))
 
 
-;; (autoload    'doc-mode         "doc-mode"         nil t)
-;; ;; (add-to-list 'auto-mode-alist '("\\.adoc$" . doc-mode))
-;; (add-hook 'doc-mode-hook
-;; 	  '(lambda ()
-;; 	     (turn-on-auto-fill)
-;; 	     (require 'asciidoc)))
+;; ;;; integrate ido with artist-mode
+;; (defun artist-ido-select-operation (type)
+;; "Use ido to select a drawing operation in artist-mode"
+;; (interactive (list (ido-completing-read "Drawing operation: "
+;;                                      (list "Pen" "Pen Line" "line" "straight line" "rectangle"
+;;                                            "square" "poly-line" "straight poly-line" "ellipse"
+;;                                            "circle" "text see-thru" "text-overwrite" "spray-can"
+;;                                            "erase char" "erase rectangle" "vaporize line" "vaporize lines"
+;;                                            "cut rectangle" "cut square" "copy rectangle" "copy square"
+;;                                            "paste" "flood-fill"))))
+;; (artist-select-operation type))
+;; (defun artist-ido-select-settings (type)
+;; "Use ido to select a setting to change in artist-mode"
+;; (interactive (list (ido-completing-read "Setting: "
+;;                                      (list "Set Fill" "Set Line" "Set Erase" "Spray-size" "Spray-chars"
+;;                                            "Rubber-banding" "Trimming" "Borders"))))
+;; (if (equal type "Spray-size")
+;; (artist-select-operation "spray set size")
+;; (call-interactively (artist-fc-get-fn-from-symbol
+;;                     (cdr (assoc type '(("Set Fill" . set-fill)
+;;                                        ("Set Line" . set-line)
+;;                                        ("Set Erase" . set-erase)
+;;                                        ("Rubber-banding" . rubber-band)
+;;                                        ("Trimming" . trimming)
+;;                                        ("Borders" . borders)
+;;                                        ("Spray-chars" . spray-chars))))))))
+;; (add-hook 'artist-mode-init-hook
+;;      (lambda ()
+;;        (define-key artist-mode-map (kbd "C-c C-a C-o") 'artist-ido-select-operation)
+;;        (define-key artist-mode-map (kbd "C-c C-a C-c") 'artist-ido-select-settings)))
+
 
 (provide 'mrflip-modes)
+

@@ -85,3 +85,6 @@
 [submodule "vendor/adoc-mode"]
 	path = vendor/adoc-mode
 	url = https://github.com/sensorflo/adoc-mode.git
+[submodule "vendor/ess"]
+	path = vendor/ess
+	url = https://github.com/emacs-ess/ESS.git

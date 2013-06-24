@@ -40,7 +40,7 @@
 ;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/applescript-mode"))
 ;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/as3-mode"))
 ;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/cell-mode"))
-;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/clojure-mode"))
+(add-to-list 'load-path (concat dotfiles-dir "/vendor/clojure-mode"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/coffee-mode"))
 ;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme@"))
 (add-to-list 'load-path (concat dotfiles-dir "/vendor/cucumber-mode"))

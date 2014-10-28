@@ -53,4 +53,13 @@
 (setq hippie-expand-try-functions-list (delete 'try-complete-file-name             hippie-expand-try-functions-list))
 (setq hippie-expand-try-functions-list (append hippie-expand-try-functions-list '(try-complete-file-name-partially)))
 
+;; disable vc-mode
+(setq vc-handled-backends nil)
+(setq vc-ignore-dir-regexp (format "\\(%s\\)\\|\\(%s\\)" vc-ignore-dir-regexp tramp-file-name-regexp))
+
+(require 'uniquify)
+(setq 
+  uniquify-buffer-name-style 'forward
+  uniquify-separator "/")
+
 (provide 'mrflip-dot-emacs)

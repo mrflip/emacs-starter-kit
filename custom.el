@@ -10,7 +10,9 @@
  '(adoc-enable-two-line-title nil)
  '(adoc-insert-replacement nil)
  '(adoc-unichar-name-resolver nil)
- '(align-open-comment-modes (quote (vhdl-mode emacs-lisp-mode lisp-interaction-mode lisp-mode scheme-mode c++-mode c-mode java-mode perl-mode cperl-mode python-mode makefile-mode ruby-mode)))
+ '(align-open-comment-modes
+   (quote
+    (vhdl-mode emacs-lisp-mode lisp-interaction-mode lisp-mode scheme-mode c++-mode c-mode java-mode perl-mode cperl-mode python-mode makefile-mode ruby-mode)))
  '(align-perl-modes (quote (perl-mode cperl-mode ruby-mode)))
  '(align-text-modes (quote (text-mode outline-mode markdown-mode)))
  '(align-to-tab-stop nil)
@@ -36,10 +38,27 @@
  '(custom-magic-show-button t)
  '(default-major-mode (quote text-mode) t)
  '(default-truncate-lines t t)
- '(develock-max-column-plist (quote (emacs-lisp-mode nil lisp-interaction-mode nil change-log-mode nil texinfo-mode nil c-mode nil c++-mode nil java-mode nil jde-mode nil html-mode nil html-helper-mode nil cperl-mode nil perl-mode nil mail-mode nil message-mode nil cmail-mail-mode nil tcl-mode nil ruby-mode nil)))
+ '(develock-max-column-plist
+   (quote
+    (emacs-lisp-mode nil lisp-interaction-mode nil change-log-mode nil texinfo-mode nil c-mode nil c++-mode nil java-mode nil jde-mode nil html-mode nil html-helper-mode nil cperl-mode nil perl-mode nil mail-mode nil message-mode nil cmail-mail-mode nil tcl-mode nil ruby-mode nil)))
+ '(diff-switches "-u -w")
  '(even-window-heights nil)
  '(fill-column 80)
- '(flymake-allowed-file-name-masks (quote (("^[^#@]+Rakefile$" flymake-ruby-init) ("^[^#@]+\\.rb$" flymake-ruby-init) ("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init) ("\\.xml\\'" flymake-xml-init) ("\\.html?\\'" flymake-xml-init) ("\\.cs\\'" flymake-simple-make-init) ("\\.p[ml]\\'" flymake-perl-init) ("\\.php[345]?\\'" flymake-php-init) ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup) ("\\.java\\'" flymake-simple-make-java-init flymake-simple-java-cleanup) ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup) ("\\.tex\\'" flymake-simple-tex-init) ("\\.idl\\'" flymake-simple-make-init))))
+ '(flymake-allowed-file-name-masks
+   (quote
+    (("^[^#@]+Rakefile$" flymake-ruby-init)
+     ("^[^#@]+\\.rb$" flymake-ruby-init)
+     ("\\.\\(?:c\\(?:pp\\|xx\\|\\+\\+\\)?\\|CC\\)\\'" flymake-simple-make-init)
+     ("\\.xml\\'" flymake-xml-init)
+     ("\\.html?\\'" flymake-xml-init)
+     ("\\.cs\\'" flymake-simple-make-init)
+     ("\\.p[ml]\\'" flymake-perl-init)
+     ("\\.php[345]?\\'" flymake-php-init)
+     ("\\.h\\'" flymake-master-make-header-init flymake-master-cleanup)
+     ("\\.java\\'" flymake-simple-make-java-init flymake-simple-java-cleanup)
+     ("[0-9]+\\.tex\\'" flymake-master-tex-init flymake-master-cleanup)
+     ("\\.tex\\'" flymake-simple-tex-init)
+     ("\\.idl\\'" flymake-simple-make-init))))
  '(flymake-gui-warnings-enabled nil)
  '(flymake-no-changes-timeout 2)
  '(flymake-start-syntax-check-on-find-file nil)
@@ -57,7 +76,9 @@
  '(ido-enable-flex-matching t)
  '(ido-enable-regexp nil)
  '(ido-ignore-directories (quote ("\\`CVS/" "\\`\\.\\./" "\\`\\./" "\\`\\.svn")))
- '(ido-ignore-files (quote ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "\\`\\.DS_Store" "\\`\\.Icon" "\\`LICENSE\\'" "\\.bak\\'")))
+ '(ido-ignore-files
+   (quote
+    ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "\\`\\.DS_Store" "\\`\\.Icon" "\\`LICENSE\\'" "\\.bak\\'")))
  '(ido-use-filename-at-point nil)
  '(indent-region-mode nil t)
  '(inhibit-startup-screen t)
@@ -89,31 +110,63 @@
  '(js2-rebind-eol-bol-keys nil)
  '(mark-even-if-inactive t)
  '(markdown-footnote-location (quote immediately))
- '(markdown-hr-string "__________________________________________________________________________")
+ '(markdown-hr-string
+   "__________________________________________________________________________")
  '(ns-alternate-modifier (quote super))
  '(paren-sexp-mode t)
- '(pig-mode-hook (lambda nil (make-local-variable (quote tab-width)) (set (quote tab-width) 2)))
+ '(pig-indent-level 2)
+ '(pig-mode-hook
+   (lambda nil
+     (make-local-variable
+      (quote tab-width))
+     (set
+      (quote tab-width)
+      2)))
  '(predictive-mode t)
  '(read-file-name-completion-ignore-case t)
  '(recentf-exclude (quote ("/[^/]+@[^/]+:.*")))
  '(recentf-save-file "~/.recentf")
+ '(remote-file-name-inhibit-cache 90)
  '(remote-shell-program "/usr/bin/ssh")
  '(require-final-newline t)
  '(ruby-deep-indent-paren nil)
- '(safe-local-variable-values (quote ((sh-indent-comment . t) (encoding . utf-8) (encoding . binary) (ruby-compilation-executable . "ruby") (ruby-compilation-executable . "ruby1.8") (ruby-compilation-executable . "ruby1.9") (ruby-compilation-executable . "rbx") (ruby-compilation-executable . "jruby") (whitespace-line-column . 80) (lexical-binding . t))))
+ '(safe-local-variable-values
+   (quote
+    ((sh-indent-comment . t)
+     (encoding . utf-8)
+     (encoding . binary)
+     (ruby-compilation-executable . "ruby")
+     (ruby-compilation-executable . "ruby1.8")
+     (ruby-compilation-executable . "ruby1.9")
+     (ruby-compilation-executable . "rbx")
+     (ruby-compilation-executable . "jruby")
+     (whitespace-line-column . 80)
+     (lexical-binding . t))))
  '(scroll-bar-mode (quote right))
  '(sh-basic-offset 2)
  '(sh-indentation 2)
  '(show-paren-mode t)
  '(show-paren-style (quote expression))
+ '(sql-product (quote mysql))
+ '(sql-user "root")
  '(standard-indent 2)
  '(tab-always-indent nil)
- '(text-mode-hook (quote ((lambda nil (set (make-local-variable (quote indent-tabs-mode)) t)) text-mode-hook-identify)))
+ '(text-mode-hook
+   (quote
+    ((lambda nil
+       (set
+        (make-local-variable
+         (quote indent-tabs-mode))
+        t))
+     text-mode-hook-identify)))
  '(tool-bar-mode nil)
+ '(tramp-auto-save-directory "/foo/emacs-cruft/flip/tramp-saves")
  '(tramp-completion-reread-directory-timeout 300)
- '(tramp-default-method "ssh")
+ '(tramp-default-method "scp")
+ '(tramp-verbose 4)
  '(transient-mark-mode t)
  '(vc-follow-symlinks t)
+ '(vc-stay-local t)
  '(visible-bell t)
  '(x-select-enable-clipboard t)
  '(yaml-indent-offset 2))
@@ -124,6 +177,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(diff-added ((t (:inherit diff-changed :background "#00332c" :foreground "#e7fde4"))))
+ '(diff-changed ((t (:background "#000000" :foreground "#eee8d5" :inverse-video t))))
+ '(diff-context ((t (:background "#839496" :foreground "#fdf6e3" :inverse-video t))))
+ '(diff-file-header ((t (:weight bold))))
+ '(diff-header ((t (:background "#eee8d6"))))
+ '(diff-refine-added ((t (:inherit diff-refine-change :background "#e7fde4"))))
+ '(diff-refine-change ((t (:background "#d4e9fa"))))
+ '(diff-refine-removed ((t (:inherit diff-refine-change :background "#faeedc"))))
+ '(diff-removed ((t (:background "#433d18" :foreground "#fadecc" :inverse-video t))))
  '(fixed-pitch ((t (:family "Menlo"))))
  '(js2-error-face ((t (:foreground "#dc322f" :weight bold))))
  '(js2-external-variable-face ((t (:foreground "#268bd2"))))

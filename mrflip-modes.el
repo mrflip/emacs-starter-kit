@@ -87,7 +87,7 @@
 ;;; override definition in starter-kit-defuns.el
 (defun add-watchwords ()
   (font-lock-add-keywords
-   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|KLUDGE\\|HACK\\):"
+   nil '(("\\<\\(FIX\\|TODO\\|FIXME\\|HACK\\|REFACTOR\\|KLUDGE\\|HACK\\)[-: ]"
           1 font-lock-warning-face t))))
 
 ;; make tab be a tab in text modes...
@@ -125,21 +125,21 @@
 (add-hook 'markdown-mode-hook
           (lambda()
             (set-fill-column 100)
-            (longlines-mode)
+            (visual-line-mode)
             (add-watchwords)
             (set (make-local-variable 'tab-width) 8)
             (define-key markdown-mode-map (kbd "<tab>") 'insert-literal-tab)
-            (set (make-local-variable 'paragraph-start)
-                 "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: ")
-            ;;   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: |^[ \t]*[*+-] \\")
+            ;; (set (make-local-variable 'paragraph-start)
+            ;;      "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: ")
+            ;; ;;   "\f\\|[ \t]*$\\|^[ \t*][0-9]+\\.\\|^[ \t]*: |^[ \t]*[*+-] \\")
             ))
 ;; (modify-syntax-entry ?\" "\"" markdown-mode-syntax-table)
 
 (add-hook 'adoc-mode-hook
           (lambda()
-            ;; (add-watchwords)
+            (add-watchwords)
             (set-fill-column 100)
-            ;; (longlines-mode)
+            (visual-line-mode)
             (buffer-face-mode -1)
             ))
 
@@ -150,7 +150,7 @@
             ))
 
 (c-add-style "flipjava" '(
-             (c-basic-offset . 4)
+             (c-basic-offset . 2)
              (c-comment-only-line-offset 0 . 0)
              (c-offsets-alist
               (inline-open           . 0)
@@ -164,6 +164,8 @@
               (statement-cont        . +)
               ;; (arglist-intro      . c-lineup-arglist-intro-after-paren)
               (arglist-intro         . +)
+              (arglist-cont          . +)
+              (arglist-cont-nonempty . +)
               (arglist-close         . c-lineup-arglist)
               (access-label          . 0)
               (inher-cont            . c-lineup-java-inher)
@@ -175,7 +177,18 @@
             (set (make-local-variable 'tab-width) 4)
             (set (make-local-variable 'standard-indent) 4)
             (set (make-local-variable 'c-basic-offset) 'set-from-style)
+            (c-set-style "flipjava")
             ))
+
+
+;; (add-hook 'php-mode-hook
+;;           (lambda()
+;;             (add-watchwords)
+;;             (set (make-local-variable 'tab-width) 4)
+;;             (set (make-local-variable 'standard-indent) 4)
+;;             (set (make-local-variable 'c-basic-offset) 'set-from-style)
+;;             (c-set-style "flipjava")
+;;             ))
 
 
 ;; ;;; integrate ido with artist-mode

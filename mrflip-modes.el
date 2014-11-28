@@ -5,6 +5,7 @@
       (append
        '(("python"  . python-mode))
        '(("python2" . python-mode))
+       '(("python3" . python-mode))
        '(("ruby"    . ruby-mode))
        '(("perl"    . cperl-mode))
        interpreter-mode-alist))
@@ -21,6 +22,7 @@
 (autoload    'clojure-mode     "clojure-mode"     "Mode for editing clojure files"         t)
 (autoload    'coffee-mode      "coffee-mode"      "Mode for editing coffeescript files"    t)
 (autoload    'docbook-xml-mode "docbook-xml-mode" "Mode for editing Docbook XML files"     t)
+(autoload    'dockerfile-mode  "dockerfile-mode"  "Mode for editing Dockerfiles"           t)
 (autoload    'erlang-mode      "erlang-mode"      "Mode for editing erlang files"          t)
 (autoload    'feature-mode     "feature-mode"     "Mode for editing cucumber files"        t)
 (autoload    'haml-mode        "haml-mode"        "Mode for editing HAML files"            t)
@@ -53,6 +55,7 @@
     '("\\.\\(i|xs\\)$"               . c-mode)
     '("\\.\\([pP][LlMm]\\|al\\)$"    . cperl-mode)
     '("\\.css\\(\\.erb\\)?$"         . css-mode)
+    '("\\Dockerfile)$"               . dockerfile-mode)
     '("\\.feature$"                  . feature-mode)
     '("\\.m$"                        . matlab-mode)
     '("\\.[rsx]html?\\(\\.erb\\)?$"  . nxhtml-mode)
@@ -79,6 +82,11 @@
 
 ;; if it's a shebang script, make is exemacutable
 (add-hook 'after-save-hook 'executable-make-buffer-file-executable-if-script-p)
+
+;; Run M-x enable-command to re-enable
+(put 'narrow-to-region 'disabled t)
+(put 'narrow-to-page   'disabled t)
+(put 'narrow-to-defun  'disabled t)
 
 (defun ruby-eval-buffer () (interactive)
   "Evaluate the buffer with ruby."

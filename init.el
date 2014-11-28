@@ -129,3 +129,6 @@
 (if window-system (color-theme-solarized-light))
 
 ;;; init.el ends here
+(put 'narrow-to-page 'disabled t)
+(put 'narrow-to-defun 'disabled t)
+(put 'narrow-to-region 'disabled t)

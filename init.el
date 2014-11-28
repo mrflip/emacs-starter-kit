@@ -132,3 +132,6 @@
 (put 'narrow-to-page 'disabled t)
 (put 'narrow-to-defun 'disabled t)
 (put 'narrow-to-region 'disabled t)
+
+;;; STFU about dotfiles dir
+(delete dotfiles-dir load-path)

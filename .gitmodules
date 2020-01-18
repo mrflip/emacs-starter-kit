@@ -91,3 +91,6 @@
 [submodule "vendor/dockerfile-mode"]
 	path = vendor/dockerfile-mode
 	url = https://github.com/spotify/dockerfile-mode.git
+[submodule "vendor/lua-mode"]
+	path = vendor/lua-mode
+	url = https://github.com/immerrr/lua-mode.git

@@ -26,6 +26,8 @@
 ;; (global-set-key	  [delete]	    'delete-char)
 ;; ;(global-set-key   [backspace]	     'backward-delete-char)
 
+(setq       ns-option-modifier  'super )
+(setq       ns-command-modifier 'meta )
 
 (global-set-key  [kp-delete]            'delete-char)
 (global-set-key	 [C-delete]             'kill-word)

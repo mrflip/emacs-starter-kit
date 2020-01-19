@@ -33,4 +33,9 @@
 (setq tramp-auto-save-directory      (concat user-temporary-file-directory "tramp-saves"))
 (setq create-lockfiles               nil) ; must be using patch https://raw.github.com/gist/2100737
 
+
+(add-hook 'js-mode-hook (lambda () (setq syntax-ppss-table nil)))
+(setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+(setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+
 (provide 'mrflip-dot-emacs)

@@ -13,6 +13,7 @@
 (setq emacs20up (>= emacs-major-version 20))
 (setq emacs19up (>= emacs-major-version 19))
 (setq custom-file (concat dotfiles-dir "custom.el"))
+(load custom-file)
 
 ;; Load up ELPA, the package manager
 (setq autoload-file (concat dotfiles-dir "loaddefs.el"))

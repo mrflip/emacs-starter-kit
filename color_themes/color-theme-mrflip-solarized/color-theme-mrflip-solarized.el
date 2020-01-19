@@ -77,7 +77,7 @@ Set this to t if using the sRGB patch on OS X."
   (base1     "#93a1a1" "#81908f" "#8a8a8a" "brightcyan"    "cyan")
   (base2     "#eee8d5" "#e9e2cb" "#e4e4e4" "white"         "white")
   (base3     "#fdf6e3" "#fcf4dc" "#ffffd7" "brightwhite"   "white")
-  (yellow    "#b58900" "#a57705" "#af8700" "yellow"        "yellow")
+  (yellow    "#65b555" "#a57705" "#af8700" "yellow"        "yellow")
   (orange    "#cb4b16" "#bd3612" "#d75f00" "brightred"     "red")
   (red       "#dc322f" "#c60007" "#d70000" "red"           "red")
   (magenta   "#d33682" "#c61b6e" "#af005f" "magenta"       "magenta")
@@ -114,7 +114,7 @@ setting `frame-background-mode'.
           (base2   (if srgb "#eee8d5" "#e9e2cb")) ; (0.9161 0.8900 0.7978)
           (base3   (if srgb "#fdf6e3" "#fcf4dc")) ; (0.9894 0.9579 0.8641)
           ;;
-          (yellow  (if srgb "#f5f588" "#a57705")) ; (0.6475 0.4675 0.0235) b58900
+          (yellow  (if srgb "#65b555" "#a57705")) ; (0.6475 0.4675 0.0235) b58900 b58900
           (orange  (if srgb "#cb4b16" "#bd3612")) ; (0.7418 0.2133 0.0735)
           (red     (if srgb "#dc322f" "#c60007")) ; (0.7770 0.0000 0.0290)
           (magenta (if srgb "#d33682" "#c61b6e")) ; (0.7774 0.1080 0.4352)
@@ -194,7 +194,7 @@ names to which it refers are bound."
 
       ;; ace-window
       (aw-background-face                       (:foreground ,contrast-background))
-      (aw-leading-char-face                     (:foreground ,yellow))
+      (aw-leading-char-face                     (:foreground ,blueish0))
 
       ;; avy
       (avy-background-face                      (:foreground ,contrast-background))
@@ -230,10 +230,10 @@ names to which it refers are bound."
       (clojure-test-success-face                (:background nil :foreground nil :underline ,green))
 
       ;; For Brian Carper's extended clojure syntax table
-      (clojure-keyword                          (:foreground ,yellow))
+      (clojure-keyword                          (:foreground ,blueish))
       (clojure-parens                           (:foreground ,strong))
       (clojure-braces                           (:foreground ,green))
-      (clojure-brackets                         (:foreground ,yellow))
+      (clojure-brackets                         (:foreground ,blueish))
       (clojure-double-quote                     (:foreground ,cyan :background nil))
       (clojure-special                          (:foreground ,blue))
       (clojure-java-call                        (:foreground ,magenta))

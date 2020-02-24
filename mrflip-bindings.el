@@ -54,6 +54,8 @@
 (global-set-key	 [C-kp-6]               'forward-word)
 (global-set-key	 [s-kp-6]               'forward-word)
 (global-set-key  (kbd "\e[1;5C")        'forward-word)
+(global-set-key  [M-up]                 'scroll-down-command)
+(global-set-key  [M-down]               'scroll-up-command)
 (global-set-key	 [s-up]                 'backward-paragraph)
 (global-set-key	 [C-kp-up]              'backward-paragraph)
 (global-set-key	 [s-kp-up]              'backward-paragraph)

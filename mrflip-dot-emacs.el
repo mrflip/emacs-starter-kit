@@ -1,6 +1,8 @@
 (column-number-mode t)		;; Display column number on mode line
 ;; (setq ns-pop-up-frames nil)
 
+;; flycheck in in mrflip-modes
+
 (require 'uniquify)
 (setq 
   uniquify-buffer-name-style 'forward
@@ -33,9 +35,18 @@
 (setq tramp-auto-save-directory      (concat user-temporary-file-directory "tramp-saves"))
 (setq create-lockfiles               nil) ; must be using patch https://raw.github.com/gist/2100737
 
+(setq hippie-expand-try-functions-list (delete 'try-complete-lisp-symbol-partially hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (delete 'try-complete-lisp-symbol           hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (delete 'try-complete-file-name-partially   hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (delete 'try-complete-file-name             hippie-expand-try-functions-list))
+(setq hippie-expand-try-functions-list (append hippie-expand-try-functions-list '(try-complete-file-name-partially)))
 
 (add-hook 'js-mode-hook (lambda () (setq syntax-ppss-table nil)))
 (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
 (setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
 
+(require 'spaceline-config)
+(spaceline-spacemacs-theme)
+(require 'diminish)
+(diminish 'abbrev-mode "Abv")
 (provide 'mrflip-dot-emacs)

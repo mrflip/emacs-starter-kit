@@ -33,7 +33,9 @@
     (add-to-list 'package-archives
 		 (cons "gnu" (concat proto "://elpa.gnu.org/packages/")))))
 (package-initialize)
-
+;; Help emacs find tools on OSX
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 ;;
 ;; Custom paths
 ;;
@@ -51,6 +53,10 @@
 (require 'mrflip-defuns)
 (require 'mrflip-bindings)
 
+;; Fix a mmm-mode bug
+(setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+(setq mmm-typescript-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))
+
 (add-to-list 'load-path              (concat dotfiles-dir "/color_themes"))
 (add-to-list 'load-path              (concat dotfiles-dir "/color_themes/color-theme-mrflip-solarized"))
 (add-to-list 'custom-theme-load-path (concat dotfiles-dir "/color_themes"))
@@ -65,3 +71,4 @@
 
 ;;; STFU about dotfiles dir
 (delete dotfiles-dir load-path)
+(put 'downcase-region 'disabled nil)

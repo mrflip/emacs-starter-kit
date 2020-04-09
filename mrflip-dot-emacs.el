@@ -1,6 +1,13 @@
 (column-number-mode t)		;; Display column number on mode line
 ;; (setq ns-pop-up-frames nil)
 
+;; defining a keyboard macro:
+;; C-x (  --- start typing
+;; C-x e  --- conclude definition
+;; define region
+;; C-x C-k r --- run macro on region
+
+
 ;; flycheck in in mrflip-modes
 
 (require 'uniquify)

@@ -26,7 +26,7 @@
   (interactive)
   (indent-region (point-min) (point-max) nil)
   )
-(defun indent-line-or-region-rigidly   (b e n) "indent-rigidly by arg tab-widths"
+(defun indent-line-or-region-rigidly (b e n) "indent-rigidly by arg tab-widths"
   (interactive "r\np")
   (save-excursion
     (let (deactivate-mark)
@@ -41,7 +41,21 @@
   (interactive "r\np")
   (indent-line-or-region-rigidly b e (* -1 n)))
 
+(defun indent-rigidly-2 (b e n) "indent-rigidly by arg tab-widths"
+  (interactive "r\np")
+  (save-excursion
+    (let (deactivate-mark)
+      (if (or (= b e) (not mark-active))
+          (progn
+            (end-of-line)
+            (let ((eol (point)))
+              (beginning-of-line)
+              (indent-rigidly (point) eol (* 2 (or n 1)))))
+        (indent-rigidly b e (* 2 (or n 1)))))))
+(defun unindent-rigidly-2 (b e n) "(un)indent-rigidly by -arg tab-widths"
+  (interactive "r\np")
+  (indent-rigidly-2 b e (* -1 n)))
+
 ;; auto-save fixes now in mrflip-dot-files
 
 (provide 'mrflip-defuns)
-

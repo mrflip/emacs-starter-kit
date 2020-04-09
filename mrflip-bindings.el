@@ -108,6 +108,7 @@
 (global-set-key	 (kbd "C-x f")          'find-file)	       ;Overrides C-x f as set-fill-column
 (global-set-key	 (kbd "C-x C-r")        'insert-file)
 (global-set-key	 (kbd "C-x C-n")        'next-error)
+(global-set-key	 (kbd "C-x C-g")        'keyboard-quit)
 
 (global-set-key	 (kbd "C-x 5 5")        'ns-toggle-fullscreen)
 
@@ -134,9 +135,9 @@
 (global-set-key  (kbd "C-x C-2")        'set-tab-width-2)
 (global-set-key  (kbd "C-x C-4")        'set-tab-width-4)
 (global-set-key  (kbd "C-x C-8")        'set-tab-width-8)
-(global-set-key  (kbd "<S-tab>")        'unindent-line-or-region-rigidly)
-(global-set-key  (kbd "<C-tab>")        'indent-line-or-region-rigidly)
-(global-set-key  (kbd "<C-S-tab>")      'indent-code-rigidly)
+(global-set-key  (kbd "<S-tab>")        'unindent-rigidly-2)
+(global-set-key  (kbd "<C-tab>")        'indent-rigidly-2)
+(global-set-key  (kbd "<C-S-tab>")      'unindent-rigidly-2)
 
 (global-set-key	 (kbd "C-M-,")          'tags-loop-continue)
 (global-set-key	 (kbd "M-s")            'tags-search)

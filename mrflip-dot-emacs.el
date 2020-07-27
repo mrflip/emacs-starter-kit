@@ -11,7 +11,7 @@
 ;; flycheck in in mrflip-modes
 
 (require 'uniquify)
-(setq 
+(setq
   uniquify-buffer-name-style 'forward
   uniquify-separator "/")
 
@@ -28,7 +28,7 @@
 ;;
 ;; Regulate how auto-save files are stored
 ;;
-(defvar user-temporary-file-directory (concat "/foo/emacs-cruft/" user-login-name "/"))
+(defvar user-temporary-file-directory (concat "/Users/Shared/foo/emacs-cruft/" user-login-name "/"))
 (make-directory user-temporary-file-directory t)
 (setq backup-by-copying   t
       version-control     t
@@ -46,7 +46,7 @@
 (setq hippie-expand-try-functions-list (delete 'try-complete-lisp-symbol           hippie-expand-try-functions-list))
 (setq hippie-expand-try-functions-list (delete 'try-complete-file-name-partially   hippie-expand-try-functions-list))
 (setq hippie-expand-try-functions-list (delete 'try-complete-file-name             hippie-expand-try-functions-list))
-(setq hippie-expand-try-functions-list (append hippie-expand-try-functions-list '(try-complete-file-name-partially)))
+;; (setq hippie-expand-try-functions-list (append hippie-expand-try-functions-list '(try-complete-file-name-partially)))
 
 (add-hook 'js-mode-hook (lambda () (setq syntax-ppss-table nil)))
 (setq mmm-js-mode-enter-hook (lambda () (setq syntax-ppss-table nil)))

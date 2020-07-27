@@ -109,6 +109,8 @@
 (global-set-key	 (kbd "C-x C-r")        'insert-file)
 (global-set-key	 (kbd "C-x C-n")        'next-error)
 (global-set-key	 (kbd "C-x C-g")        'keyboard-quit)
+(global-set-key  (kbd "C-c o")          'sort-words-and-fill)
+(global-set-key  (kbd "C-c C-o")        'sort-words-and-fill)
 
 (global-set-key	 (kbd "C-x 5 5")        'ns-toggle-fullscreen)
 
@@ -138,6 +140,7 @@
 (global-set-key  (kbd "<S-tab>")        'unindent-rigidly-2)
 (global-set-key  (kbd "<C-tab>")        'indent-rigidly-2)
 (global-set-key  (kbd "<C-S-tab>")      'unindent-rigidly-2)
+(global-set-key  (kbd "M-\\")           'indent-region)
 
 (global-set-key	 (kbd "C-M-,")          'tags-loop-continue)
 (global-set-key	 (kbd "M-s")            'tags-search)
@@ -153,7 +156,6 @@
 (global-set-key  [M-f8]                 'kmacro-end-and-call-macro)
 (global-set-key  (kbd "<s-f8>")         'call-last-kbd-macro)
 (global-set-key  (kbd "C->")            'nxml-finish-element)
-(global-set-key  (kbd "C-/")            'nxml-complete)
 (global-set-key  (kbd "C-x C-z")        'undo)
 (global-set-key  (kbd "C-c C-s")        'Buffer-menu-sort-by-path)
 

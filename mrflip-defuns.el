@@ -6,6 +6,31 @@
 
 (defun font-lock-and-redraw ()     "Force a font-lock-fontify-buffer and then do the redraw" (interactive) (font-lock-fontify-buffer) (recenter) )
 
+(defun sort-words (reverse beg end)
+  "Sort words in region alphabetically, in REVERSE if negative.
+    Prefixed with negative \\[universal-argument], sorts in reverse.
+
+    The variable `sort-fold-case' determines whether alphabetic case
+    affects the sort order.
+
+    See `sort-regexp-fields'."
+  (interactive "*P\nr")
+  (sort-regexp-fields reverse "\\w+" "\\&" beg end))
+
+(defun sort-words-and-fill (reverse beg end)
+  "Sort words in region alphabetically, in REVERSE if negative.
+    Prefixed with negative \\[universal-argument], sorts in reverse.
+
+    The variable `sort-fold-case' determines whether alphabetic case
+    affects the sort order.
+
+    After sorting, runs fill-paragraph.
+
+    See `sort-regexp-fields'."
+  (interactive "*P\nr")
+  (sort-regexp-fields reverse "\\w+" "\\&" beg end)
+  (fill-region beg end))
+
 
 ;;; Bug: kills line and newline. o wells
 (defun delete-line () "deletes the line forward"
